@@ -1,8 +1,8 @@
-import musicReducer from "./musicReducers";
+import musicControl from "./musicReducers";
 import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({
-  musicReducer,
+  musicControl
 });
 
 export default rootReducer;
