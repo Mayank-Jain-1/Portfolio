@@ -1,26 +1,74 @@
-import './App.css';
-import Sidebar from './components/Sidebar';
-import Topbar from './components/Topbar';
+import "./App.css";
+import Sidebar from "./components/Sidebar";
+import Topbar from "./components/Topbar";
 import Landing from "./pages/landing";
 
-import React from 'react'
+import React from "react";
 
 const App = () => {
   return (
     <>
-    <Sidebar/>
-    <Topbar/>
-    <Landing/>
-    sdfafasdfsdasdffffffffffffffffffffffffffffffffff
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    asdfasdfsd
-    </>
-  )
-}
+      <Sidebar />
+      <Topbar />
+      <Landing />
+      <h1 className="text-7xl">
+        sdfafasdfsdasdffffffffffffffffffffffffffffffffff
+      </h1>
+      <div>
 
-export default App
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      </div>
+    </>
+  );
+};
+
+export default App;
