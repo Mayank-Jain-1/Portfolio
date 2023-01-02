@@ -1,5 +1,4 @@
 import React from "react";
-import Bgmusic from "./components/Bgmusic";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
 import Landing from "./pages/landing";
