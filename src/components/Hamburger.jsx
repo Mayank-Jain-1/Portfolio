@@ -7,7 +7,6 @@ const Hamburger = ({flag, toggleFunction,   className}) => {
   
   const isOpen = useSelector((state)=> state.navControl)
   const dispatch = useDispatch();
-  console.log(isOpen);
 
   return (
     <button onClick={()=> dispatch(toggleNav())} className={`relative flex flex-col items-center bg-black bg-opacity-50 w-8 h-8 p-2 rounded-md ${className}`}>

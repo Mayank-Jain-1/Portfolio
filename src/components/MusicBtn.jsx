@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ImSoundcloud } from "react-icons/im";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMusic } from "../actions/index";
 
 const MusicBtn = () => {
 
-  const music = useSelector( (state) => state.musicControl)
+  const isMusic = useSelector( (state) => state.musicControl.isMusic)
+  console.log(isMusic)
   const dispatch = useDispatch();
-  const textColor = !music ? 'text-brandPurple' : 'text-brandGreen';
-
+  const textColor = !isMusic ? 'text-brandPurple' : 'text-brandGreen';
+  
   return (
     <>
       <button
@@ -19,7 +20,7 @@ const MusicBtn = () => {
       >
         <ImSoundcloud className="text-2xl md:text-4xl" />
         <span className="text-white mx-2">Music</span>
-        <span>{music ? 'ON' : 'OFF'}</span>
+        <span>{isMusic ? 'ON' : 'OFF'}</span>
       </button>
     </>
   );

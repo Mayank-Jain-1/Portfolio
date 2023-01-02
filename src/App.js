@@ -10,7 +10,7 @@ const App = () => {
     <>
 
 
-      <Bgmusic/>
+      {/* <Bgmusic/> */}
 
       <Sidebar />
       <Topbar />
