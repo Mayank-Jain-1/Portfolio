@@ -7,7 +7,7 @@ const MusicBtn = () => {
 
   const music = useSelector( (state) => state.musicControl)
   const dispatch = useDispatch();
-  const color = music ? 'brandPurple' : 'brandGreen';
+  const textColor = !music ? 'text-brandPurple' : 'text-brandGreen';
 
   return (
     <>
@@ -15,11 +15,11 @@ const MusicBtn = () => {
         onClick={() => {
           dispatch(toggleMusic());
         }}
-        className={`text-${color} flex items-center p-8`}
+        className={`${textColor} flex items-center p-3`}
       >
         <ImSoundcloud className="text-4xl" />
         <span className="text-white mx-2">Music</span>
-        <span className="">{music ? 'ON' : 'OFF' }</span>
+        <span>{music ? 'ON' : 'OFF'}</span>
       </button>
     </>
   );

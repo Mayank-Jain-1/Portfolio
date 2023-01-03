@@ -2,13 +2,16 @@ import React from 'react'
 import Navlinks from './Navlinks'
 import Profilelinks from './Profilelinks'
 import logo from '../media/Mjlogo.png'
+import { useSelector } from 'react-redux'
 
 const Sidebar = () => {
-  return (
-    <div className='hidden lg:flex flex-col justify-between bg-darker w-full lg:w-36 h-screen'>
-      <div className='bg-black'>
+  const isOpen = useSelector(store => store.navControl)
 
-      <img src={logo} className='h-52 object-cover m-auto' alt=''/>
+  return (
+    <div className={`${isOpen ? 'opacity-100 z-10' : 'opacity-0 -z-10'} flex flex-col justify-between bg-darker w-full lg:w-36 h-screen duration-300`}>
+      <div className='bg-black pt-5'>
+
+      <img src={logo} className='h-52 object-cover m-auto lg:mt-0' alt=''/>
       </div>
       <Navlinks/>
       <Profilelinks />

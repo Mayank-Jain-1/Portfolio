@@ -15,3 +15,9 @@ export const stopMusic = () => {
     type: "STOP_MUSIC",
   };
 };
+
+export const toggleNav = () => {
+  return {
+    type: "TOGGLE_NAV",
+  };
+};

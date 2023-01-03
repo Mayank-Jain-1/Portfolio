@@ -12,6 +12,9 @@ module.exports = {
         lighter: '#2b2b2b'
       },
     },
+    safelist: [
+      {pattern: /(w|h|bg|text|border)-./}
+    ],
   },
   plugins: [],
 };
