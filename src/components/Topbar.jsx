@@ -4,9 +4,9 @@ import Hamburger from './Hamburger'
 
 const Topbar = () => {
   return (
-    <div className='fixed top-0 flex lg:justify-end justify-between w-full h-12 px-5'>
+    <div className='fixed top-0 flex lg:justify-end justify-between w-full h-12 lg:px-5 '>
       <MusicBtn/>
-      <Hamburger/>
+      <Hamburger className='lg:hidden'/>
     </div>
   )
 }
