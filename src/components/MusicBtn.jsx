@@ -15,7 +15,7 @@ const MusicBtn = () => {
         onClick={() => {
           dispatch(toggleMusic());
         }}
-        className={`${textColor} flex items-center p-3 h-12 text-xs md:text-base`}
+        className={`${textColor} flex items-center p-3 h-8 text-xs md:text-base`}
       >
         <ImSoundcloud className="text-2xl md:text-4xl" />
         <span className="text-white mx-2">Music</span>

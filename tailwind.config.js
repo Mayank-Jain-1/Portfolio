@@ -4,17 +4,59 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brandGreen: '#83D1c4',
-        brandPurple: '#c337f6',
-        brandOrange: '#F17950',
-        dark: '#1d1d1d',
-        darker: '#181818',
-        lighter: '#2b2b2b'
+        brandGreen: "#5bf0d9",
+        brandPurple: "#c337f6",
+        brandOrange: "#F17950",
+        dark: "#1d1d1d",
+        darker: "#181818",
+        lighter: "#2b2b2b",
+      },
+      fontFamily: {
+        mark: ["Marck Script", "cursive"],
+      },
+      animation: {
+        crash: "crash 0.8s ease-in-out 1",
+      },
+      keyframes: {
+        crash: {
+          "0%": {
+            color:"white",
+            transform: 'scale(1,1)'
+          },
+
+          '30%': {
+            color: "#5bf0d9",
+          },
+
+          '45%': {
+            transform: 'scale(1.25,0.75)'
+          },
+
+          '50%':{
+            transform: 'scale(0.85,1.25)',
+          },
+          
+          '65%':{
+            transform: 'scale(1.18,0.9)',
+          },
+          
+          '75%': {
+            color: 'white',
+            transform: 'scale(0.9, 1.05)'
+          },
+
+          '87%': {
+            transform: 'scale(1.02,0.98)'
+          },
+
+          '90%': {
+            transform: 'scale(1, 1)'
+          }
+          
+        },
       },
     },
-    safelist: [
-      {pattern: /(w|h|bg|text|border)-./}
-    ],
+    safelist: ['animate-crash',{ pattern: /(w|h|bg|text|border)-./ }],
   },
   plugins: [],
 };
