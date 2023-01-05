@@ -8,7 +8,7 @@ const Sidebar = () => {
   const isOpen = useSelector(store => store.navControl)
 
   return (
-    <div className={`${isOpen ? 'opacity-100 z-10' : 'opacity-0 -z-10'} flex flex-col justify-between bg-darker w-full lg:w-36 h-screen duration-300`}>
+    <div className={` ${isOpen ? 'opacity-100 z-10' : 'opacity-0 -z-10'} lg:opacity-100 flex flex-col justify-between bg-darker w-full lg:w-36 h-screen duration-300`}>
       <div className='bg-black pt-5'>
 
       <img src={logo} className='h-52 object-cover m-auto lg:mt-0' alt=''/>
