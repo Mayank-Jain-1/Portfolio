@@ -14,7 +14,7 @@ const landing = () => {
     return result;
   };
   const arrayToCrash = (array) => {
-    let result = []
+    let result = [];
     for (let i = 0; i < mainText.length; i++) {
       const element = mainText[i];
       if (element === "<br/>") {
@@ -22,8 +22,12 @@ const landing = () => {
       } else if (element.includes("png")) {
         result.push(
           <div className="inline-block">
-            <img src={element} alt="" className=" h-7 sm:h-10 md:h-16 lg:h-20
-            mr-1" />
+            <img
+              src={element}
+              alt=""
+              className=" h-7 sm:h-10 md:h-16 lg:h-20
+            mr-1"
+            />
           </div>
         );
       } else {
@@ -45,10 +49,9 @@ const landing = () => {
     "web developer",
   ];
   const crashText = arrayToCrash(mainText);
-  const tab0 = " -ml-1 sm:ml-0 "
-  const tab1 = " ml-2 sm:ml-3 "
-  const tab2 = " ml-6 sm:ml-7 lg:ml-6 "
-
+  const tab0 = " -ml-1 sm:ml-0 ";
+  const tab1 = " ml-2 sm:ml-3 ";
+  const tab2 = " ml-6 sm:ml-7 lg:ml-6 ";
 
   return (
     <section
@@ -56,7 +59,7 @@ const landing = () => {
      pl-4 lg:pl-40 flex flex-col h-screen justify-center relative"
     >
       <div className="absolute top-16 lg:top-5">
-        <Codefont text="!html" className={tab0}/>
+        <Codefont text="!html" className={tab0} />
         <Codefont text="body" className={tab1} />
       </div>
 
@@ -69,12 +72,17 @@ const landing = () => {
         </div>
 
         <Codefont text="p" className={tab1} />
-        <p className={"ml-4 lg:ml-10 text-neutral-500 font-mono text-xs sm:text-base md:text-lg " + tab2}>
+        <p
+          className={`ml-4 lg:ml-10 text-neutral-500 font-mono text-xs sm:text-base md:text-lg ${tab2}`}
+        >
           Front End Devloper / React Developer
         </p>
         <Codefont text="/p" className={tab1} />
-        <ContactMe className={tab2}/>
-        
+        <ContactMe className={tab2} />
+      </div>
+
+      <div className="absolute bottom-5">
+        <Codefont text="/body" className={tab1} />
       </div>
     </section>
   );
