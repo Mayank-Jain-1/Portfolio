@@ -4,7 +4,7 @@ const CrashText = ({ text, className }) => {
 
   const [animate, setanimate] = useState(false);
   const animationName = "animate-crash"
-  var style = `${text == ' ' && 'ml-2'} duration-200 inline-block font-franklin font-bold text-white text-xl ${animate && animationName} hover:text-brandGreen`;
+  var style = `${text == ' ' && 'ml-3 sm:ml-5 '} duration-200 inline-block font-franklin font-bold text-white text-3xl sm:text-5xl md:text-7xl ${animate && animationName} hover:text-brandGreen`;
 
   return (
     <span
