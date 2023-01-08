@@ -1,12 +1,16 @@
 import './App.css';
 import Sidebar from './components/Sidebar';
+import Topbar from './components/Topbar';
 
-function App() {
+import React from 'react'
+
+const App = () => {
   return (
     <>
-      <Sidebar/>
+    <Sidebar/>
+    <Topbar/>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
