@@ -3,7 +3,7 @@ import Navlink from "./Navlink";
 
 const Navlinks = () => {
   return (
-    <ul className="text-white lg:flex-col w-full items-center  border-t border-neutral-800 text-neutral-500 text-base font-semibold">
+    <ul className="lg:flex-col w-full items-center  border-t border-neutral-800 text-neutral-500 text-base font-semibold">
       <Navlink name="About" linkTo="tochange"/>
       <Navlink name="My Skills" linkTo="tochange"/>
       <Navlink name="Work" linkTo="tochange"/>
