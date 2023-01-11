@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navlink = ({name,linkTo,className}) => {
   return (
-    <li className={`border-b border-dark w-full text-center ${className}`}><a href={linkTo}>{name}</a></li>
+    <li className={"border-b border-neutral-800 w-full text-center py-2 " + className}><a href={linkTo}>{name}</a></li>
   )
 }
 

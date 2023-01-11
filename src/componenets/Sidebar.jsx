@@ -3,10 +3,10 @@ import Navlinks from './Navlinks'
 
 const Sidebar = () => {
   return (
-    <div className='bg-darker w-full lg:w-32
-     lg:h-full'>
+    <div className='flex lg:flex-col justify-between bg-darker w-full lg:w-32 lg:h-screen'>
       <img src="" alt="" />
       <Navlinks/>
+      <div></div>
     </div>
   )
 }
