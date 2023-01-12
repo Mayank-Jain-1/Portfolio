@@ -13,6 +13,7 @@ module.exports = {
       },
       fontFamily: {
         mark: ["Marck Script", "cursive"],
+        franklin: ['Libre Franklin', 'sans-serif'],
       },
       animation: {
         crash: "crash 0.8s ease-in-out 1",
@@ -20,43 +21,30 @@ module.exports = {
       keyframes: {
         crash: {
           "0%": {
-            color:"white",
-            transform: 'scale(1,1)'
+            transform: "scale(1,1)",
           },
-
-          '30%': {
-            color: "#5bf0d9",
+          "45%": {
+            transform: "scale(1.25,0.75)",
           },
-
-          '45%': {
-            transform: 'scale(1.25,0.75)'
+          "50%": {
+            transform: "scale(0.85,1.25)",
           },
-
-          '50%':{
-            transform: 'scale(0.85,1.25)',
+          "65%": {
+            transform: "scale(1.18,0.9)",
           },
-          
-          '65%':{
-            transform: 'scale(1.18,0.9)',
+          "75%": {
+            transform: "scale(0.9, 1.05)",
           },
-          
-          '75%': {
-            color: 'white',
-            transform: 'scale(0.9, 1.05)'
+          "87%": {
+            transform: "scale(1.02,0.98)",
           },
-
-          '87%': {
-            transform: 'scale(1.02,0.98)'
+          "90%": {
+            transform: "scale(1, 1)",
           },
-
-          '90%': {
-            transform: 'scale(1, 1)'
-          }
-          
         },
       },
     },
-    safelist: ['animate-crash',{ pattern: /(w|h|bg|text|border)-./ }],
+    safelist: ["animate-crash", { pattern: /(w|h|bg|text|border)-./ }],
   },
   plugins: [],
 };
