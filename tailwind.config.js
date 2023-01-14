@@ -13,10 +13,11 @@ module.exports = {
       },
       fontFamily: {
         mark: ["Marck Script", "cursive"],
-        franklin: ['Libre Franklin', 'sans-serif'],
+        franklin: ["Libre Franklin", "sans-serif"],
       },
       animation: {
         crash: "crash 0.8s ease-in-out 1",
+        wiggle: "wiggle 1.25s ease-in-out infinite",
       },
       keyframes: {
         crash: {
@@ -40,6 +41,14 @@ module.exports = {
           },
           "90%": {
             transform: "scale(1, 1)",
+          },
+        },
+        wiggle: {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-1rem)",
           },
         },
       },

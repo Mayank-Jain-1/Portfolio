@@ -1,7 +1,8 @@
 import React from "react";
 import Codefont from "../components/Codefont";
-import ContactMe from "../components/ContactMe";
+import FillBtn from "../components/FillBtn";
 import CrashText from "../components/CrashText";
+import Scrolldown from "../components/Scrolldown";
 import J from "../media/J4.png";
 import M from "../media/M.png";
 
@@ -25,7 +26,7 @@ const landing = () => {
             <img
               src={element}
               alt=""
-              className=" h-7 sm:h-10 md:h-16 lg:h-20
+              className=" h-7 sm:h-10 md:h-14 lg:h-20 
             mr-1"
             />
           </div>
@@ -56,7 +57,7 @@ const landing = () => {
   return (
     <section
       className="
-     pl-4 lg:pl-40 flex flex-col h-screen justify-center relative"
+     pl-6 sm:pl-8 lg:pl-44 flex flex-col h-screen justify-center relative"
     >
       <div className="absolute top-16 lg:top-5">
         <Codefont text="!html" className={tab0} />
@@ -78,12 +79,13 @@ const landing = () => {
           Front End Devloper / React Developer
         </p>
         <Codefont text="/p" className={tab1} />
-        <ContactMe className={tab2} />
+        <FillBtn text={'Contact Me!'} className={tab2} />
       </div>
 
       <div className="absolute bottom-5">
         <Codefont text="/body" className={tab1} />
       </div>
+      <Scrolldown />
     </section>
   );
 };
