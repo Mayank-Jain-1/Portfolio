@@ -65,8 +65,8 @@ const landing = () => {
       </div>
 
       <div>
-        <Codefont text="h1" className={tab1} />
 
+        <Codefont text="h1" className={tab1} />
         <div className={tab2}>
           {crashText}
           <Codefont text="/h1" className={"inline-block ml-5"} />
@@ -74,9 +74,9 @@ const landing = () => {
 
         <Codefont text="p" className={tab1} />
         <p
-          className={`ml-4 lg:ml-10 text-neutral-500 font-mono text-xs sm:text-base md:text-lg ${tab2}`}
+          className={` text-neutral-500 font-mono text-xs sm:text-base md:text-lg ${tab2}`}
         >
-          Front End Devloper / React Developer
+          Front End Developer / React Developer
         </p>
         <Codefont text="/p" className={tab1} />
         <FillBtn text={'Contact Me!'} className={tab2} />

@@ -1,21 +1,22 @@
-import "./App.css";
+import React from "react";
+import Bgmusic from "./components/Bgmusic";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
 import Landing from "./pages/landing";
 
-import React from "react";
 
 const App = () => {
   return (
     <>
+
+
+      <Bgmusic/>
+
       <Sidebar />
       <Topbar />
       <Landing />
-      <h1 className="text-7xl">
-        sdfafasdfsdasdffffffffffffffffffffffffffffffffff
-      </h1>
-      <div>
 
+      <div>
       <br />
       <br />
       <br />
