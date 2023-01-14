@@ -50,14 +50,14 @@ const landing = () => {
     "web developer",
   ];
   const crashText = arrayToCrash(mainText);
-  const tab0 = " -ml-1 sm:ml-0 ";
-  const tab1 = " ml-2 sm:ml-3 ";
-  const tab2 = " ml-6 sm:ml-7 lg:ml-6 ";
+  const tab0 = " ml-2 sm:ml-4 lg:ml-8";
+  const tab1 = " ml-3 sm:ml-7 lg:ml-12";
+  const tab2 = " ml-5 sm:ml-10 lg:ml-16 ";
 
   return (
     <section
       className="
-     pl-6 sm:pl-8 lg:pl-44 flex flex-col h-screen justify-center relative"
+     lg:pl-36 flex flex-col h-screen justify-center relative"
     >
       <div className="absolute top-16 lg:top-5">
         <Codefont text="!html" className={tab0} />
@@ -82,10 +82,14 @@ const landing = () => {
         <FillBtn text={'Contact Me!'} className={tab2} />
       </div>
 
-      <div className="absolute bottom-5">
+      {/* <div className="absolute bottom-5">
         <Codefont text="/body" className={tab1} />
+      </div> */}
+      <div>
+      <Scrolldown className='absolute bottom-5 ml-1 lg:ml-2'/>
+      <Scrolldown className='absolute bottom-5
+      right-0 sm:right-1 lg:right-2'/>
       </div>
-      <Scrolldown />
     </section>
   );
 };

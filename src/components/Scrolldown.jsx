@@ -1,12 +1,12 @@
 import React from 'react'
 import { AiOutlineArrowDown } from "react-icons/ai";
 
-const Scrolldown = () => {
+const Scrolldown = ({className}) => {
   return (
     // <div style={{writingMode: "vertical-lr"}}>Scrolldown &rarr;</div>
-    <div style={{writingMode: "vertical-lr"}} className='text-white flex w-7  bg-slate-500 items-center'>
+    <div style={{writingMode: "vertical-lr"}} className={`text-white text-xs sm:text-sm font-semibold flex w-7  items-center  ${className}`}>
       <span className='inline-block animate-wiggle'>scroll down</span>
-        <AiOutlineArrowDown className='mt-3'/>
+        <AiOutlineArrowDown className='mt-2'/>
 
     </div>
   )

@@ -17,7 +17,7 @@ module.exports = {
       },
       animation: {
         crash: "crash 0.8s ease-in-out 1",
-        wiggle: "wiggle 1.25s ease-in-out infinite",
+        wiggle: "wiggle 1.1s ease-in infinite",
       },
       keyframes: {
         crash: {
