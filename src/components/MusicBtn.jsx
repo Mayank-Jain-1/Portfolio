@@ -5,9 +5,8 @@ import { toggleMusic } from "../actions/index";
 
 const MusicBtn = () => {
 
-  const isMusic = useSelector( (state) => state.musicControl.isMusic)
-  console.log(isMusic)
   const dispatch = useDispatch();
+  const isMusic = useSelector( (state) => state.musicControl.isMusic)
   const textColor = !isMusic ? 'text-brandPurple' : 'text-brandGreen';
   
   return (

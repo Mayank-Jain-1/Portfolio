@@ -1,4 +1,5 @@
 import React from "react";
+import MouseTrailer from "./components/MouseTrailer";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
 import Landing from "./pages/landing";
@@ -8,9 +9,7 @@ const App = () => {
   return (
     <>
 
-
-      {/* <Bgmusic/> */}
-
+      <MouseTrailer/>
       <Sidebar />
       <Topbar />
       <Landing />

@@ -1,10 +1,10 @@
 import CrashText from "../components/CrashText";
 
 
-export const textToCrash = (str) => {
+export const textToCrash = (str,k) => {
   var result = [];
   for (let i = 0; i < str.length; i++) {
-    result.push(<CrashText text={str[i]} />);
+    result.push(<CrashText key={`${k}-${i}`} text={str[i]} />);
   }
   return result;
 };
@@ -14,10 +14,10 @@ export const arrayToCrash = (array) => {
   for (let i = 0; i < array.length; i++) {
     const element = array[i];
     if (element === "<br/>") {
-      result.push(<br />);
+      result.push(<br key={i}/>);
     } else if (element.includes("png")) {
       result.push(
-        <div className="inline-block">
+        <div key={i} className="inline-block">
           <img
             src={element}
             alt=""
@@ -27,9 +27,13 @@ export const arrayToCrash = (array) => {
         </div>
       );
     } else {
-      var temp = textToCrash(element);
+      var temp = textToCrash(element,i);
       result.push(...temp);
     }
   }
   return result;
 };
+
+export const randomMinMax = (min,max) => {
+  return  Math.floor(Math.random * (max - min + 1) -min)
+}
