@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from "react";
 
+//TODO
+//Move all the required functions to the ../function/trailerFunctions.js
+
 const MouseTrailer = () => {
   const canvas = useRef();
   var ctx = undefined;
@@ -19,12 +22,12 @@ const MouseTrailer = () => {
 
   function mouseMove(event) {
     if (event.touches) {
-      target.x = event.touches[0].pageX;
-      target.y = event.touches[0].clientY;
+      
     } else {
       target.x = event.clientX;
       target.y = event.clientY;
     }
+
     event.preventDefault();
   }
 
@@ -39,13 +42,6 @@ const MouseTrailer = () => {
     ctx.canvas.width = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
   };
-
-  function Node() {
-    this.x = 0;
-    this.y = 0;
-    this.vx = 0;
-    this.vy = 0;
-  }
 
   function Tendril(options) {
     this.init(options || {});
@@ -242,8 +238,8 @@ const MouseTrailer = () => {
     resize();
     
     window.addEventListener('mousemove',mouseMove)
-    window.addEventListener('touchmove',mouseMove)
-    window.addEventListener('touchstart',touchStart,{ passive: false })
+    // window.addEventListener('touchmove',mouseMove)
+    // window.addEventListener('touchstart',touchStart,{ passive: false })
     window.addEventListener("resize", resize);
     const animate = setInterval(() => {
       loop();
@@ -252,8 +248,8 @@ const MouseTrailer = () => {
     
     return () => {
       window.removeEventListener('mousemove',mouseMove)
-      window.removeEventListener('touchmove',mouseMove)
-      window.removeEventListener('touchstart',touchStart,{ passive: false })
+      // window.removeEventListener('touchmove',mouseMove)
+      // window.removeEventListener('touchstart',touchStart,{ passive: false })
       window.removeEventListener("resize", resize);
       clearInterval(animate);
     };
@@ -263,7 +259,7 @@ const MouseTrailer = () => {
     <canvas
       id="canvas"
       ref={canvas}
-      className="fixed -z-10"
+      className="fixed -z-10 w-0 sm:w-screen"
     />
   );
 };

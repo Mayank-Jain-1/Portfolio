@@ -2,7 +2,7 @@ import React from "react";
 import MouseTrailer from "./components/MouseTrailer";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
-import Landing from "./pages/landing";
+import Landing from "./pages/Landing";
 
 
 const App = () => {
