@@ -18,12 +18,15 @@ const MouseTrailer = () => {
   var tendrils = [];
 
   const mouseMove = (event) => {
-    target.x = event.clientX;
-    target.y = event.clientY;
-    event.preventDefault();
-    // console.log(target);
-    // drawCircle()
-    // loop()
+    if (event.touches.length == 1) {
+      target.x = event.touches[0].pageX;
+      target.y = event.touches[0].pageY;
+    }
+    else{
+      target.x = event.clientX;
+      target.y = event.clientY;
+
+    }
   };
 
   const drawCircle = () => {
@@ -243,7 +246,7 @@ const MouseTrailer = () => {
     
     window.addEventListener('mousemove',mouseMove)
     window.addEventListener('touchmove',mouseMove)
-    
+    console.log(target);
     window.addEventListener("resize", resize);
     const animate = setInterval(() => {
       loop();
