@@ -18,6 +18,7 @@ module.exports = {
       animation: {
         crash: "crash 0.8s ease-in-out 1",
         wiggle: "wiggle 1.1s ease-in infinite",
+        fadeIn: "fadeIn 0.3s ease-in-out 1"
       },
       keyframes: {
         crash: {
@@ -51,6 +52,15 @@ module.exports = {
             transform: "translateY(-1rem)",
           },
         },
+
+        fadeIn: {
+          "0%":{
+            opacity: "0",
+          },
+          "100%":{
+            opacity: "1",
+          }
+        }
       },
     },
     safelist: ["animate-crash", { pattern: /(w|h|bg|text|border)-./ }],
