@@ -241,15 +241,18 @@ const MouseTrailer = () => {
     reset();
     resize();
     
+    window.addEventListener('mousemove',mouseMove)
+    window.addEventListener('touchmove',mouseMove)
+    
     window.addEventListener("resize", resize);
     const animate = setInterval(() => {
       loop();
-      // console.log(tendrils);
-      // drawCircle();
-      // console.log(target)
+      
     }, 1000 / 150);
-
+    
     return () => {
+      window.removeEventListener('mousemove',mouseMove)
+      window.removeEventListener('touchmove',mouseMove)
       clearInterval(animate);
       window.removeEventListener("resize", resize);
     };
@@ -262,7 +265,7 @@ const MouseTrailer = () => {
       onTouchMove={mouseMove}
       id="canvas"
       ref={canvas}
-      className="fixed z-10"
+      className="fixed -z-10"
     />
   );
 };
