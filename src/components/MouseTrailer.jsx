@@ -210,6 +210,7 @@ const MouseTrailer = () => {
     }
   }
 
+  var color = Math.random();
 
   const loop = () => {
     ctx.globalCompositeOperation = "source-over";
@@ -219,10 +220,9 @@ const MouseTrailer = () => {
     ctx.strokeStyle = "hsla(171,98%,56%,0.25)";
     ctx.lineWidth = 1;
 
-    var color = Math.floor(Math.random * 2);
 
-    if (color == 0) {
-      ctx.strokeStyle = "hsla(346,98%,56%,0.25)";
+    if (color < 0.5) {
+      ctx.strokeStyle = "hsl(284, 91%, 15%)";
     } else {
       ctx.strokeStyle = "hsla(171,98%,56%,0.25)";
     }
