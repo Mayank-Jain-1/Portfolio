@@ -32,7 +32,7 @@ const MouseTrailer = () => {
 
 
   function mouseMove(event) {
-    if (event.touches.length == 1) {
+    if (event.touches) {
       target.x = event.touches[0].pageX;
       target.y = event.touches[0].clientY;
       console.log(event);
