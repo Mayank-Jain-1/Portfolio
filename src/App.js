@@ -14,7 +14,7 @@ const App = () => {
       <Topbar />
       <Landing />
 
-      <div>
+      {/* <div>
       <br />
       <br />
       <br />
@@ -65,7 +65,7 @@ const App = () => {
       <br />
       <br />
       <br />
-      </div>
+      </div> */}
     </>
   );
 };
