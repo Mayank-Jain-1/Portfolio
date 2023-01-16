@@ -7,8 +7,7 @@ const ContactMe = ({text,className}) => {
     after:absolute after:bottom-0 after:right-0
     after:w-2 after:h-2 after:bg-brandGreen
     before:absolute before:-z-10 before:top-0 before:left-0 before:w-0 before:h-full before:bg-brandGreen
-    hover:text-black hover:before:w-full before:duration-300` 
-    + className}>{text}</button>
+    hover:text-black hover:before:w-full before:duration-300 ${className}`} >{text}</button>
     </a>
   )
 }

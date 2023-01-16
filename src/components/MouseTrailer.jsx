@@ -17,25 +17,10 @@ const MouseTrailer = () => {
 
   var tendrils = [];
 
-  // const mouseMove = (event) => {
-  //   if (event.touches.length == 1) {
-  //     target.x = event.touches[0].pageX;
-  //     target.y = event.touches[0].pageY;
-  //     event.preventDefault()
-  //   }
-  //   else{
-  //     target.x = event.clientX;
-  //     target.y = event.clientY;
-
-  //   }
-  // };
-
-
   function mouseMove(event) {
     if (event.touches) {
       target.x = event.touches[0].pageX;
       target.y = event.touches[0].clientY;
-      console.log(event);
     } else {
       target.x = event.clientX;
       target.y = event.clientY;
@@ -183,7 +168,6 @@ const MouseTrailer = () => {
           node.y += node.vy;
           
           spring *= settings.tension;
-          // console.log(target);
         }
       },
       
@@ -254,34 +238,29 @@ const MouseTrailer = () => {
 
   useEffect(() => {
     ctx = canvas.current.getContext("2d");
-    console.log(ctx);
     reset();
     resize();
     
     window.addEventListener('mousemove',mouseMove)
     window.addEventListener('touchmove',mouseMove)
     window.addEventListener('touchstart',touchStart,{ passive: false })
-    console.log(target);
     window.addEventListener("resize", resize);
     const animate = setInterval(() => {
       loop();
       
-    }, 1000 / 150);
+    }, 1000 / 120);
     
     return () => {
       window.removeEventListener('mousemove',mouseMove)
       window.removeEventListener('touchmove',mouseMove)
       window.removeEventListener('touchstart',touchStart,{ passive: false })
-      clearInterval(animate);
       window.removeEventListener("resize", resize);
+      clearInterval(animate);
     };
   }, []);
 
   return (
     <canvas
-    // onClick={drawCircle}
-      onMouseMove={mouseMove}
-      onTouchMove={mouseMove}
       id="canvas"
       ref={canvas}
       className="fixed -z-10"

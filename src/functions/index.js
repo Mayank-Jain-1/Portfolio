@@ -4,7 +4,7 @@ import CrashText from "../components/CrashText";
 export const textToCrash = (str,k) => {
   var result = [];
   for (let i = 0; i < str.length; i++) {
-    result.push(<CrashText key={`${k}-${i}`} text={str[i]} />);
+    result.push(<CrashText key={`${k}-${i}`} text={str[i]} className='text-3xl sm:text-5xl md:text-6xl lg:text-8xl' />);
   }
   return result;
 };
