@@ -259,7 +259,7 @@ const MouseTrailer = () => {
     <canvas
       id="canvas"
       ref={canvas}
-      className="fixed -z-10 w-0 sm:w-screen"
+      className="fixed -z-10 hidden sm:block "
     />
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import MouseTrailer from "./components/MouseTrailer";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
+import AboutMe from "./pages/AboutMe";
 import Landing from "./pages/Landing";
 
 
@@ -13,59 +14,8 @@ const App = () => {
       <Sidebar />
       <Topbar />
       <Landing />
+      <AboutMe/>
 
-      <div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      </div>
     </>
   );
 };
