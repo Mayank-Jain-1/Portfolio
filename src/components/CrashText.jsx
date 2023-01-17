@@ -18,11 +18,11 @@ const CrashText = ({ text, className, delay }) => {
       setIsFadeIn(true);
     }, delay * 75);
 
-    // setIsCrash(false
   }, []);
 
   return (
-    <div className={divStyle}>
+    <div 
+     className={divStyle}     >
       <span
         className={style}
         onAnimationEnd={() => setIsCrash(false)}

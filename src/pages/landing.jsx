@@ -8,7 +8,7 @@ import { arrayToCrash } from "../functions/crashTextFuncs";
 
 const Landing = () => {
   const mainText = [
-    "Hi,",
+    "Hi, ",
     "<br/>",
     "I'm ",
     M,
