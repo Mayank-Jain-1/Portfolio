@@ -14,7 +14,11 @@ const CrashTextImage = ({src,delay,className}) => {
     const delayedAnim = setTimeout(() => {
       setIsFadeIn(true)
       setIsRotate(true);
-    }, delay * 75);
+    }, delay *50);
+
+    return () => {
+      clearTimeout(delayedAnim);
+    }
 
   }, []);
   

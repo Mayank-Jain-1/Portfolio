@@ -16,7 +16,11 @@ const CrashText = ({ text, className, delay }) => {
     const delayedAnim = setTimeout(() => {
       setIsCrash(true);
       setIsFadeIn(true);
-    }, delay * 75);
+    }, delay * 50);
+
+    return () => {
+      clearTimeout(delayedAnim)
+    }
 
   }, []);
 

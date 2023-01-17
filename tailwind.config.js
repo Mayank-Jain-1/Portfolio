@@ -41,7 +41,7 @@ module.exports = {
           "87%": {
             transform: "scale(1.02,0.98)",
           },
-          "90%": {
+          "100%": {
             transform: "scale(1, 1)",
           },
         },
@@ -66,8 +66,11 @@ module.exports = {
         },
         rotateIn: {
           "0%":{
-            transform: "rotate(-200deg)",
+            transform: "rotate(-600deg)",
           },
+          "70%":{
+            transform: "rotate(0deg)",
+          }
         }
       },
     },

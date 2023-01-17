@@ -14,7 +14,7 @@ const musicControl = (state = music,action) => {
       return {...state, isMusic: !state.isMusic}
     default:
       state.isMusic ? state.audio.play() : state.audio.pause();
-      state.audio.volume = 0.07;
+      state.audio.volume = 0.02;
       state.audio.loop = true;
       return state
   }
