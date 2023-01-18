@@ -18,15 +18,14 @@ const Landing = () => {
     "<br/>",
     "web developer",
   ];
-  const crashTextClassName =
+  const crashTextStyle =
     "text-3xl sm:text-5xl md:text-6xl lg:text-8xl hover:text-brandGreen";
-  const crashText = arrayToCrash(mainText, crashTextClassName);
-  console.log(crashText);
+  const crashText = arrayToCrash(mainText, crashTextStyle);
 
   return (
     <section
       className="
-     lg:pl-36 flex flex-col h-screen justify-center  relative"
+     lg:pl-36 flex flex-col h-screen justify-center"
     >
       <div className="absolute top-16 lg:top-5">
         <Codefont text="!html" className="tab-0" />

@@ -1,10 +1,12 @@
 import musicControl from "./musicReducers";
-import { combineReducers } from "redux";
 import navControl from "./navbarReducer";
+import documentInfo from "./documentReducers";
+import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({
   musicControl,
-  navControl
+  navControl,
+  documentInfo
 });
 
 export default rootReducer;
