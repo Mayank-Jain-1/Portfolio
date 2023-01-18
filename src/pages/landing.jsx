@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Codefont from "../components/Codefont";
 import FillBtn from "../components/FillBtn";
 import Scrolldown from "../components/Scrolldown";
@@ -19,7 +19,7 @@ const Landing = () => {
     "web developer",
   ];
   const crashTextStyle =
-    "text-3xl sm:text-5xl md:text-6xl lg:text-8xl hover:text-brandGreen";
+    "text-4xl sm:text-7xl md:text-7xl lg:text-8xl hover:text-brandGreen";
   const crashText = arrayToCrash(mainText, crashTextStyle);
 
   return (

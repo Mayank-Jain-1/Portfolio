@@ -22,15 +22,10 @@ export const toggleNav = () => {
   };
 };
 
-export const updateClientHeight = () => {
-  return {
-    type: "UPDATE_CLIENTHEIGHT"
-  }
-};
 
-export const updateWindowHeight = () => {
+export const updateViewHeight = () => {
   return {
-    type: "UPDATE_WINDOWHEIGHT"
+    type: "UPDATE_VIEWHEIGHT"
   }
 }
 

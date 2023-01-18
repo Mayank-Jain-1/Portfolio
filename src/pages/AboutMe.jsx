@@ -1,6 +1,5 @@
 import React from 'react'
 import Codefont from '../components/Codefont'
-import CrashText from '../components/CrashText'
 import {arrayToCrash} from '../functions/crashTextFuncs'
 
 

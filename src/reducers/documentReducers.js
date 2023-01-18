@@ -1,21 +1,15 @@
 const initialState = {
-  clientHeight:  document.documentElement.clientHeight,
-  windowHeight: window.innerHeight,
+  viewHeight: Math.max(document.documentElement.clientHeight, window.innerHeight),
   scrollX: window.scrollX,
   scrollY: window.scrollY,
 }
 
 const documentInfo = (state=initialState, action) => {
   switch(action.type){
-    case "UPDATE_CLIENTHEIGHT":
+    case "UPDATE_VIEWHEIGHT":
       return {
         ...state,
-        clientHeight: document.documentElement.clientHeight
-      }
-    case "UPDATE_WINDOWHEIGHT":
-      return {
-        ...state,
-        windowHeight: window.innerHeight
+        viewHeight: Math.max(document.documentElement.clientHeight, window.innerHeight),
       }
     case "UPDATE_SCROLL":
       return {

@@ -1,4 +1,3 @@
-
 import CrashText from "../components/CrashText";
 import CrashTextImage from "../components/CrashTextImage";
 

@@ -1,9 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
+import { isVisible } from "../functions/docFunctions";
 
 const CrashText = ({ text, className, delay }) => {
   const ref = useRef();
+  const { viewHeight, scrollY } = useSelector((store) => store.documentInfo);
   const [isCrash, setIsCrash] = useState(false);
-  const [isFadeIn, setIsFadeIn] = useState(false)
+  const [isFadeIn, setIsFadeIn] = useState(false);
+  const [startAnimationDone, setStartAnimationDone] = useState(false);
   const animationName = "animate-crash";
 
   const style = `${
@@ -12,30 +16,30 @@ const CrashText = ({ text, className, delay }) => {
     isCrash && animationName
   } ${className}`;
 
-  const divStyle = `inline-block ${isFadeIn ? 'animate-fadeIn': 'opacity-0'} `
+  const divStyle = `inline-block ${isFadeIn ? "animate-fadeIn" : "opacity-0"} `;
 
   useEffect(() => {
+    if (!startAnimationDone) {
+      const visible = isVisible(ref.current, viewHeight, scrollY, 0);
 
-    // if(!(rect.bottom < 0 || rect.top -viewHeight >=0)){
-    const  delayedAnim = setTimeout(() => {
-        setIsCrash(true);
-        setIsFadeIn(true);
-      }, delay * 50);
-
-    return () => {
-      clearTimeout(delayedAnim)
+      if (visible) {
+        setStartAnimationDone(true);
+        setTimeout(() => {
+          setIsCrash(false);
+          setIsCrash(true);
+          setIsFadeIn(true);
+        }, delay * 50);
+      }
     }
-
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scrollY]);
 
   return (
-    <div 
-     className={divStyle}   ref = {ref}   >
+    <div className={divStyle} ref={ref}>
       <span
         className={style}
         onAnimationEnd={() => setIsCrash(false)}
         onMouseOver={() => setIsCrash(true)}
-       
       >
         {text}
       </span>

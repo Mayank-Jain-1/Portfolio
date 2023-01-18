@@ -5,8 +5,7 @@ import Topbar from "./components/Topbar";
 import AboutMe from "./pages/AboutMe";
 import Landing from "./pages/Landing";
 import {
-  updateClientHeight,
-  updateWindowHeight,
+  updateViewHeight,
   updateScroll,
 } from "./actions";
 import { useDispatch} from "react-redux";
@@ -17,9 +16,8 @@ const App = () => {
   useEffect(() => {
 
     window.addEventListener('resize', () => {
-      dispatch(updateClientHeight());
-      dispatch(updateWindowHeight());
-    })
+      dispatch(updateViewHeight());
+    });
     window.addEventListener("scroll", () => {
       dispatch(updateScroll());
     });
@@ -28,7 +26,11 @@ const App = () => {
       window.removeEventListener("scroll", () => {
         dispatch(updateScroll());
       });
+      window.removeEventListener('resize', () => {
+        dispatch(updateViewHeight());
+      });
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
