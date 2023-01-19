@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import MouseTrailer from "./components/MouseTrailer";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
-import AboutMe from "./Pages/AboutMe.jsx";
+import AboutMe from "./Pages/Aboutme.jsx";
 import Landing from "./Pages/Landing.jsx";
 import {
   updateViewHeight,

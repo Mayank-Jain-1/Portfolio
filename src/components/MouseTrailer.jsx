@@ -155,10 +155,10 @@ const MouseTrailer = () => {
     const ctx = canvas.current.getContext("2d");
     reset();
     resize(ctx);
+    window.addEventListener("resize", () => resize(ctx));
 
     if (windowWidth > 768) {
       window.addEventListener("mousemove", mouseMove);
-      window.addEventListener("resize", () => resize(ctx));
       const animate = setInterval(() => {
         loop(ctx);
       }, 1000 / 120);
@@ -168,6 +168,10 @@ const MouseTrailer = () => {
         window.removeEventListener("resize", resize);
         clearInterval(animate);
       };
+    }
+    
+    return () => {
+      window.removeEventListener("resize", resize);
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
