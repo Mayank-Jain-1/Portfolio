@@ -32,7 +32,7 @@ const Landing = () => {
         <Codefont text="body" className="tab-1" />
       </div>
 
-      <div>
+      <div >
         <Codefont text="h1" className="tab-1" />
         <div className="tab-2">
           {crashText}
