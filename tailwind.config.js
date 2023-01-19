@@ -3,6 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        sm: "475px",
+        md: "650px",
+      },
+
       colors: {
         brandGreen: "#5bf0d9",
         brandPurple: "#c337f6",
@@ -19,7 +24,7 @@ module.exports = {
         crash: "crash 0.8s ease-in-out 1",
         wiggle: "wiggle 1.1s ease-in infinite",
         fadeIn: "fadeIn 0.8s ease-in-out 1",
-        rotateIn: "rotateIn 0.8s ease-in-out 1"
+        rotateIn: "rotateIn 0.8s ease-in-out 1",
       },
       keyframes: {
         crash: {
@@ -54,24 +59,24 @@ module.exports = {
           },
         },
         fadeIn: {
-          "0%":{
+          "0%": {
             opacity: "0",
           },
-          "40%":{
+          "40%": {
             opacity: "0",
           },
-          "100%":{
+          "100%": {
             opacity: "1",
-          }
+          },
         },
         rotateIn: {
-          "0%":{
+          "0%": {
             transform: "rotate(-600deg)",
           },
-          "70%":{
+          "70%": {
             transform: "rotate(0deg)",
-          }
-        }
+          },
+        },
       },
     },
     safelist: ["animate-crash", { pattern: /(w|h|bg|text|border)-./ }],

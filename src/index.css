@@ -7,13 +7,13 @@
 
 @layer components{
   .tab-0{
-    @apply ml-2 sm:ml-4 lg:ml-8;
+    @apply mx-2 sm:mx-4 lg:mx-8;
   }
   .tab-1{
-    @apply ml-3 sm:ml-7 lg:ml-12;
+    @apply mx-3 sm:mx-7 lg:mx-12;
   }
   .tab-2{
-    @apply ml-5 sm:ml-10 lg:ml-16;
+    @apply mx-5 sm:mx-10 lg:mx-16;
   }
 }
 

@@ -19,7 +19,7 @@ const Landing = () => {
     "web developer",
   ];
   const crashTextStyle =
-    "text-4xl sm:text-7xl md:text-7xl lg:text-8xl hover:text-brandGreen";
+    "text-4xl sm:text-5xl md:text-7xl lg:text-8xl hover:text-brandGreen";
   const crashText = arrayToCrash(mainText, crashTextStyle);
 
   return (

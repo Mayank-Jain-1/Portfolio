@@ -5,7 +5,7 @@ const CrashTextImage = ({src,delay,className}) => {
   const [isRotate, setIsRotate] = useState(false)
   const [isFadeIn, setIsFadeIn] = useState(false)
 
-  const imgStyle = `h-8 sm:h-16 md:h-16 lg:h-20 
+  const imgStyle = `h-8 sm:h-10 md:h-16 lg:h-20 
   mr-1 ${isRotate && 'animate-rotateIn'}`
   const divStyle = `inline-block ${className} ${isFadeIn ? 'animate-fadeIn' : 'opacity-0'}`
 
