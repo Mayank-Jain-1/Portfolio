@@ -3,6 +3,7 @@ import BaseText from "../components/BaseText";
 import Codefont from "../components/Codefont";
 import TagcloudDiv from "../components/TagcloudDiv";
 import { arrayToCrash } from "../functions/crashTextFuncs";
+import ScrollIndicators from "../components/ScrollIndicators";
 
 const AboutMe = () => {
   const mainText = ["Me, Myself and I"];
@@ -12,6 +13,7 @@ const AboutMe = () => {
 
   return (
     <section className="w-screen lg:h-screen lg:pl-36 lg:pr-7 py-16 relative flex flex-col justify-center">
+
       <Codefont text="section" className="absolute top-6 tab-0" />
       <div className="flex flex-col lg:flex-row items-center">
         <div className="w-full lg:w-6/12">
@@ -50,6 +52,8 @@ const AboutMe = () => {
         <TagcloudDiv className='w-10/12 lg:w-6/12 ' textStyle='font-semibold text-brandGreen text-base sm:text-2xl md:text-3xl'/>
 
       </div>
+
+      <ScrollIndicators/>
     </section>
   );
 };

@@ -1,10 +1,10 @@
 import React from "react";
 import Codefont from "../components/Codefont";
 import FillBtn from "../components/FillBtn";
-import Scrolldown from "../components/Scrolldown";
 import J from "../media/J4.png";
 import M from "../media/M.png";
 import { arrayToCrash } from "../functions/crashTextFuncs";
+import ScrollIndicators from "../components/ScrollIndicators";
 
 const Landing = () => {
   const mainText = [
@@ -47,13 +47,7 @@ const Landing = () => {
         <FillBtn text={"Contact Me!"} className="tab-2" />
       </div>
 
-      <div>
-        <Scrolldown className="absolute bottom-5 ml-1 lg:ml-2" />
-        <Scrolldown
-          className="absolute bottom-5
-      right-0 sm:right-1 lg:right-2"
-        />
-      </div>
+      <ScrollIndicators/>
     </section>
   );
 };

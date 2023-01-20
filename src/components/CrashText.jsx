@@ -20,7 +20,7 @@ const CrashText = ({ text, className, delay }) => {
 
   useEffect(() => {
     if (!startAnimationDone) {
-      const visible = isVisible(ref.current, viewHeight, scrollY, -100);
+      const visible = isVisible(ref.current, viewHeight, scrollY, 0);
 
       if (visible) {
         setStartAnimationDone(true);

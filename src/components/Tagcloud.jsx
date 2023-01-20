@@ -101,7 +101,7 @@ import TagCloud from '@frank-mayer/react-tag-cloud'
 const Tagcloud = ({parentWidth,textStyle}) => {
 
   const options = {
-    radius : parentWidth/2
+    radius : parentWidth/2,
   }
 
   return(
