@@ -25,7 +25,7 @@ const Landing = () => {
   return (
     <section
       className="
-     lg:pl-36 flex flex-col h-screen justify-center"
+     lg:pl-36 flex flex-col h-screen text-white justify-center"
     >
       <div className="absolute top-16 lg:top-5">
         <Codefont text="!html" className="tab-0" />

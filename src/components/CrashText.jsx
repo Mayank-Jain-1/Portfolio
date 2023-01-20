@@ -12,7 +12,7 @@ const CrashText = ({ text, className, delay }) => {
 
   const style = `${
     text === " " ? "ml-4 sm:ml-5 md:ml-7 lg:ml-9" : ""
-  } duration-200 inline-block font-franklin font-bold tracking-tighter text-white ${
+  } duration-200 inline-block font-franklin font-bold tracking-tighter ${
     isCrash && animationName
   } ${className}`;
 
