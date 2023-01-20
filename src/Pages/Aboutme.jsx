@@ -1,19 +1,20 @@
 import React from "react";
 import BaseText from "../components/BaseText";
 import Codefont from "../components/Codefont";
+import TagcloudDiv from "../components/TagcloudDiv";
 import { arrayToCrash } from "../functions/crashTextFuncs";
 
 const AboutMe = () => {
   const mainText = ["Me, Myself and I"];
   const crashTextStyle =
-    "text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-brandGreen ";
+    "text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-brandGreen ";
   const crashText = arrayToCrash(mainText, crashTextStyle);
 
   return (
-    <section className="h-screen w-screen lg:pl-36 lg:pr-7 py-16 relative flex flex-col justify-center">
+    <section className="w-screen lg:h-screen lg:pl-36 lg:pr-7 py-16 relative flex flex-col justify-center">
       <Codefont text="section" className="absolute top-6 tab-0" />
-      <div className="flex flex-col lg:flex-row">
-        <div className="lg:w-4/6">
+      <div className="flex flex-col lg:flex-row items-center">
+        <div className="w-full lg:w-6/12">
           <Codefont text="h2" className="tab-1" />
           <div className="tab-2">{crashText}</div>
           <Codefont text="/h2" className="tab-1" />
@@ -40,13 +41,14 @@ const AboutMe = () => {
             <br />
             <br />
             Other than career related skills i love to play video games,
-            Badminton, Table Tennis. I love music and play Guitar.
+            Badminton, Table Tennis. I love music and play Guitar. I wouldn't say that i am very creative but i am good at finding solutions pretty quick.
           </BaseText>
           <Codefont text="/p" className="tab-1" />
         </div>
-        <div className="bg-slate-500 w-1/2 ">
-          <img src="" alt="" />
-        </div>
+
+
+        <TagcloudDiv className='w-10/12 lg:w-6/12 ' textStyle='font-semibold text-brandGreen text-base sm:text-2xl md:text-3xl'/>
+
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ImSoundcloud } from "react-icons/im";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMusic } from "../actions/index";
