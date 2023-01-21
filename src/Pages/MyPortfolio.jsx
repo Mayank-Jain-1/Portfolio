@@ -39,7 +39,7 @@ const MyPortfolio = () => {
           <Codefont text="/p" className="tab-1" />
         </div>
 
-          <Fillbtn text="See More!" className=" w-44 sm:w-56 ml-7 sm:ml-14 whitespace-nowrap" />
+          <Fillbtn text="See More!" className=" w-44 sm:w-56 ml-7 sm:ml-14 lg:mb-6 whitespace-nowrap" />
       </div>
     </section>
   );
