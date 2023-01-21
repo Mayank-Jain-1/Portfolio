@@ -23,9 +23,9 @@ export const toggleNav = () => {
 };
 
 
-export const updateViewHeight = () => {
+export const updateSize = () => {
   return {
-    type: "UPDATE_VIEWHEIGHT"
+    type: "UPDATE_SIZE"
   }
 }
 

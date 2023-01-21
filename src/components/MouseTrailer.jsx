@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
 
 //TODO
 //Move all the required functions to the ../function/trailerFunctions.js
 
 const MouseTrailer = () => {
   const canvas = useRef();
-  const [windowWidth, setWindowWidth] = useState(0);
+  const {viewWidth,viewHeight} = useSelector(store => store.documentInfo)
+  
+  // const [windowWidth, setWindowWidth] = useState(0);
   const target = {
     x: 0,
     y: 0,
@@ -26,17 +29,12 @@ const MouseTrailer = () => {
       target.x = event.clientX;
       target.y = event.clientY;
     }
-    console.log("init");
-    // console.log(target);
     event.preventDefault();
   }
 
   const resize = (ctx) => {
-    ctx.canvas.width = window.innerWidth;
-    ctx.canvas.height = window.innerHeight;
-    setWindowWidth(window.innerWidth);
-    console.log("mouse");
-    console.log();
+    ctx.canvas.height = viewHeight;
+    ctx.canvas.width = viewWidth;
   };
 
   function Tendril(options) {
@@ -134,7 +132,7 @@ const MouseTrailer = () => {
   var color = Math.random();
 
   const loop = (ctx) => {
-    if (windowWidth < 768) {
+    if (viewWidth < 768) {
       return;
     }
     ctx.globalCompositeOperation = "source-over";
@@ -163,25 +161,16 @@ const MouseTrailer = () => {
     reset();
     resize(ctx);
 
-    let timeoutId = null
-    const handleResize = () => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        resize(ctx)
-      },150)
-    }
-
-    window.addEventListener('resize',handleResize)
-    window.addEventListener("mousemove", mouseMove);
     loop(ctx);
-
+    
+    window.addEventListener("mousemove", mouseMove);
+    
     return () => {
       window.removeEventListener("mousemove", mouseMove);
-      window.removeEventListener('resize',handleResize)
     };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [target]);
+  }, [viewHeight,viewWidth]);
 
   return <canvas id="canvas" ref={canvas} className="fixed -z-10 " />;
 };
