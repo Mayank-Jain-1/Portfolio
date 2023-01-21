@@ -18,9 +18,10 @@ const CrashText = ({ text, className, delay }) => {
 
   const divStyle = `inline-block ${isFadeIn ? "animate-fadeIn" : "opacity-0"} `;
 
+  
   useEffect(() => {
     if (!startAnimationDone) {
-      const visible = isVisible(ref.current, viewHeight, scrollY, 0);
+      const visible = isVisible(ref.current, viewHeight, 30);
 
       if (visible) {
         setStartAnimationDone(true);

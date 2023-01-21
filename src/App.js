@@ -9,6 +9,7 @@ import {
   updateScroll,
 } from "./actions";
 import { useDispatch} from "react-redux";
+import MyPortfolio from "./Pages/MyPortfolio";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ const App = () => {
       <Sidebar />
       <Topbar />
       <Landing />
+      <MyPortfolio />
       <AboutMe />
     </>
   );
