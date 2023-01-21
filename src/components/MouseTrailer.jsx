@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const MouseTrailer = () => {
   const canvas = useRef();
-  const [windowWidth , setWindowWidth] = useState(0)
+  const [windowWidth, setWindowWidth] = useState(0);
   const target = {
     x: 0,
     y: 0,
@@ -26,7 +26,8 @@ const MouseTrailer = () => {
       target.x = event.clientX;
       target.y = event.clientY;
     }
-
+    console.log("init");
+    // console.log(target);
     event.preventDefault();
   }
 
@@ -34,6 +35,8 @@ const MouseTrailer = () => {
     ctx.canvas.width = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
     setWindowWidth(window.innerWidth);
+    console.log("mouse");
+    console.log();
   };
 
   function Tendril(options) {
@@ -131,6 +134,9 @@ const MouseTrailer = () => {
   var color = Math.random();
 
   const loop = (ctx) => {
+    if (windowWidth < 768) {
+      return;
+    }
     ctx.globalCompositeOperation = "source-over";
     ctx.fillStyle = "#1d1d1d";
     ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -149,33 +155,33 @@ const MouseTrailer = () => {
       tendril.update(ctx);
       tendril.draw(ctx);
     }
+    requestAnimationFrame(() => loop(ctx));
   };
 
   useEffect(() => {
     const ctx = canvas.current.getContext("2d");
     reset();
     resize(ctx);
-    window.addEventListener("resize", () => resize(ctx));
 
-    if (windowWidth > 768) {
-      window.addEventListener("mousemove", mouseMove);
-      const animate = setInterval(() => {
-        loop(ctx);
-      }, 1000 / 120);
-
-      return () => {
-        window.removeEventListener("mousemove", mouseMove);
-        window.removeEventListener("resize", resize);
-        clearInterval(animate);
-      };
+    let timeoutId = null
+    const handleResize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        resize(ctx)
+      },150)
     }
-    
+
+    window.addEventListener('resize',handleResize)
+    window.addEventListener("mousemove", mouseMove);
+    loop(ctx);
+
     return () => {
-      window.removeEventListener("resize", resize);
-    }
+      window.removeEventListener("mousemove", mouseMove);
+      window.removeEventListener('resize',handleResize)
+    };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [windowWidth]);
+  }, [target]);
 
   return <canvas id="canvas" ref={canvas} className="fixed -z-10 " />;
 };

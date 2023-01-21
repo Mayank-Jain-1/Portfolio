@@ -6,6 +6,7 @@ const Tagcloud = ({ parentWidth, textStyle }) => {
     radius: parentWidth / 2,
   };
 
+
   return (
     <TagCloud options={options} className={textStyle}>
       {[

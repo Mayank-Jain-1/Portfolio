@@ -6,7 +6,7 @@ import { arrayToCrash } from "../functions/crashTextFuncs";
 import ScrollIndicators from "../components/ScrollIndicators";
 
 const AboutMe = () => {
-  const mainText = ["Me, Myself and I #"];
+  const mainText = ["Me, Myself and I"];
   const crashTextStyle =
     "text-4xl sm:text-5xl md:text-6xl lg:text-7xl  text-brandGreen";
   const crashText = arrayToCrash(mainText, crashTextStyle);

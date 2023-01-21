@@ -18,6 +18,7 @@ const App = () => {
 
     window.addEventListener('resize', () => {
       dispatch(updateViewHeight());
+      console.log('App')
     });
     window.addEventListener("scroll", () => {
       dispatch(updateScroll());
@@ -29,6 +30,7 @@ const App = () => {
       });
       window.removeEventListener('resize', () => {
         dispatch(updateViewHeight());
+        console.log('App')
       });
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
