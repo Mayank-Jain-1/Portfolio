@@ -15,6 +15,9 @@
   .tab-2{
     @apply ml-5 sm:ml-10 lg:ml-16;
   }
+  .tab-3{
+    @apply ml-7 sm:ml-14 lg:ml-20;
+  }
 }
 
 

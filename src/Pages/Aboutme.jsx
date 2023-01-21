@@ -14,7 +14,7 @@ const AboutMe = () => {
   return (
     <section className="w-screen lg:h-screen lg:pl-36 lg:pr-7 py-16 relative flex flex-col justify-center">
 
-      <Codefont text="section" className="absolute top-6 tab-0" />
+      {/* <Codefont text="section" className="absolute top-6 tab-0" /> */}
       <div className="flex flex-col lg:flex-row items-center">
         <div className="w-full lg:w-6/12">
           <Codefont text="h2" className="tab-1" />
@@ -23,7 +23,7 @@ const AboutMe = () => {
 
           <Codefont text="p" className="tab-1" />
 
-          <BaseText className="tab-2">
+          <BaseText className="tab-3">
             A young 19yo web developer from Ludhiana, Punjab trying to make some
             money. Currently enrolled in B.Tech in Computer Science Degree from{' '}
             <span>
@@ -42,7 +42,7 @@ const AboutMe = () => {
             learning as well as from other paid sources.
             <br />
             <br />
-            Other than career related skills i love to play video games,
+            Other than career related skills i love to play video games, Chess, 
             Badminton, Table Tennis. I love music and play Guitar. I wouldn't say that i am very creative but i am good at finding solutions pretty quick.
           </BaseText>
           <Codefont text="/p" className="tab-1" />

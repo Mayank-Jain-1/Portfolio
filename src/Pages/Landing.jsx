@@ -34,17 +34,17 @@ const Landing = () => {
 
       <div >
         <Codefont text="h1" className="tab-1" />
-        <div className="tab-2">
+        <div className="tab-3">
           {crashText}
           <Codefont text="/h1" className={"inline-block ml-5"} />
         </div>
 
         <Codefont text="p" className="tab-1" />
-        <p className="text-neutral-500 font-mono text-xs sm:text-base md:text-lg tab-2">
+        <p className="text-neutral-500 font-mono text-xs sm:text-base md:text-lg tab-3">
           Front End Developer / React Developer
         </p>
         <Codefont text="/p" className="tab-1" />
-        <FillBtn text={"Contact Me!"} className="tab-2" />
+        <FillBtn text={"Contact Me!"} className="tab-3" />
       </div>
 
       <ScrollIndicators/>
