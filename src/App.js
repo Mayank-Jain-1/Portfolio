@@ -4,33 +4,29 @@ import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
 import AboutMe from "./Pages/Aboutme.jsx";
 import Landing from "./Pages/Landing.jsx";
-import {
-  updateSize,
-  updateScroll,
-} from "./actions";
-import { useDispatch} from "react-redux";
+import { updateSize, updateScroll } from "./actions";
+import { useDispatch } from "react-redux";
 import MyPortfolio from "./Pages/MyPortfolio";
 
 const App = () => {
   const dispatch = useDispatch();
-  
-  useEffect(() => {
 
+  useEffect(() => {
     let timeoutId = null;
     const handleResize = () => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
-        dispatch(updateSize())
-      },200)
-    }
+        dispatch(updateSize());
+      }, 200);
+    };
 
-    window.addEventListener('resize',handleResize)
+    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", () => {
       dispatch(updateScroll());
     });
 
     return () => {
-      window.removeEventListener('resize',handleResize)
+      window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", () => {
         dispatch(updateScroll());
       });
@@ -40,12 +36,14 @@ const App = () => {
 
   return (
     <>
-      <MouseTrailer />
-      <Sidebar />
-      <Topbar />
-      <Landing />
-      <MyPortfolio />
-      <AboutMe />
+    <MouseTrailer /> 
+    <Sidebar />
+    <Topbar />
+    <div className="lg:pl-36">
+          <Landing />
+          <MyPortfolio />
+          <AboutMe />
+    </div>
     </>
   );
 };

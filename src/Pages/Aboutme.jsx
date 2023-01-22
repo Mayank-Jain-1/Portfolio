@@ -12,7 +12,7 @@ const AboutMe = () => {
   const crashText = arrayToCrash(mainText, crashTextStyle);
 
   return (
-    <section className="w-screen lg:h-screen lg:pl-36 lg:pr-7 py-16 relative flex flex-col justify-center">
+    <section className="w-full lg:h-screen py-16 px-1 sm:px-3 md:px-6 lg:px-8 relative flex flex-col justify-center">
 
       {/* <Codefont text="section" className="absolute top-6 tab-0" /> */}
       <div className="flex flex-col lg:flex-row items-center">

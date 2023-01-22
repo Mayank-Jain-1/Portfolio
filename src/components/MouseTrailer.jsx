@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 
 //TODO
 //Move all the required functions to the ../function/trailerFunctions.js
+//Make loop into a debounce function using setInterval. to boost performace.
 
 const MouseTrailer = () => {
   const canvas = useRef();
@@ -172,7 +173,7 @@ const MouseTrailer = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [viewHeight,viewWidth]);
 
-  return <canvas id="canvas" ref={canvas} className="fixed -z-10 " />;
+  return <canvas id="canvas" ref={canvas} className="fixed left-0 top-0 -z-10 " />;
 };
 
 export default MouseTrailer;

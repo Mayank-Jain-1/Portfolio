@@ -4,10 +4,10 @@ const ScrollIndicators = ({className}) => {
 
   return (
     <div className={className}>
-        <Scrolldown className="absolute bottom-5 sm:ml-1 lg:ml-2" />
+        <Scrolldown className="absolute bottom-5 left-1 sm:left-3" />
         <Scrolldown
           className="absolute bottom-5
-      right-0 sm:right-1 lg:right-2"
+      right-0 sm:right-2"
         />
     </div>
   )

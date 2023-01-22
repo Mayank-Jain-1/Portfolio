@@ -11,7 +11,7 @@ const Sidebar = () => {
     <div
       className={`fixed ${
         isOpen ? "opacity-100 z-20" : "opacity-0 -z-10"
-      }  lg:z-20 lg:opacity-100 flex flex-col justify-between bg-darker w-full lg:w-36 h-screen duration-300`}
+      } top-0 left-0 lg:z-0 lg:opacity-100 flex flex-col justify-between bg-darker w-full lg:w-36  h-screen duration-300`}
     >
       <div  className="bg-black pt-5 lg:pt-0 flex justify-center">
         <a href="toChange">
@@ -21,6 +21,7 @@ const Sidebar = () => {
       </div>
       <Navlinks />
       <Profilelinks />
+
     </div>
   );
 };

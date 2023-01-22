@@ -2,6 +2,7 @@ import React from "react";
 import BaseText from "../components/BaseText";
 import Codefont from "../components/Codefont";
 import Fillbtn from "../components/FillBtn";
+import Imgwall from "../components/Imgwall";
 import { arrayToCrash } from "../functions/crashTextFuncs";
 
 const MyPortfolio = () => {
@@ -11,7 +12,7 @@ const MyPortfolio = () => {
   const crashText = arrayToCrash(mainText, crashTextStyle);
 
   return (
-    <section className="w-screen lg:h-screen lg:pl-36 lg:pr-10 py-16 relative">
+    <section className="w-full py-16 px-1 sm:px-3 md:px-6 lg:px-8 relative">
       <Codefont text="h2" className="tab-1" />
       <div className="tab-2">{crashText}</div>
       <Codefont text="/h2" className="tab-1" />
@@ -41,6 +42,7 @@ const MyPortfolio = () => {
 
           <Fillbtn text="See More!" className=" w-44 sm:w-56 ml-7 sm:ml-14 lg:mb-6 whitespace-nowrap" />
       </div>
+      <Imgwall/>
     </section>
   );
 };
