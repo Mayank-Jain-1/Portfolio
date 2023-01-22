@@ -13,7 +13,7 @@ const MyPortfolio = () => {
 
   return (
     <>
-      <section className="w-full py-16 px-1 sm:px-3 md:px-6 lg:px-8 relative">
+      <section className="w-full py-20 px-1 sm:px-3 md:px-6 lg:px-8 relative">
         <Codefont text="h2" className="tab-1" />
         <div className="tab-2">{crashText}</div>
         <Codefont text="/h2" className="tab-1" />
