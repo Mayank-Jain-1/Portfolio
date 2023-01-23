@@ -8,7 +8,7 @@ const ImgwallImage = ({className, src}) => {
     w-1/3 md:w-1/5
     flex items-center justify-center
     relative overflow-hidden duration-300`}>
-      <img src={src || defaultSrc} alt="" className="aspect-square brightness-50 group-hover:scale-110 group-hover:brightness-100 duration-300" />
+      <img src={src || defaultSrc} alt="" className="aspect-square brightness-75 md:brightness-50 group-hover:scale-110 group-hover:brightness-100 duration-300" />
       <a href="toChange" className="absolute top-1/2 left-1/2 
       -translate-x-1/2 -translate-y-1/2
       w-2/6 h-2/6 bg-brandGreen rounded-full border-none font-mono flex items-center justify-center text-center uppercase tracking-widest text-[6px] sm:text-[8px] md:text-[7px] lg:text-[10px]

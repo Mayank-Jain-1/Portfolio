@@ -17,11 +17,11 @@ const Imgwall = () => {
 
 
     <div className='flex flex-wrap my-3'>
+      <ImgwallImage src={NewsMonkey} />
       <ImgwallImage src={Netflix} />
       <ImgwallImage src={CloudCast} />
-      <ImgwallImage src={NewsMonkey} />
-      <ImgwallImage src={Mjlogo} />
       <ImgwallImage src={PoseMaster} />
+      <ImgwallImage src={Mjlogo} className='hidden md:block'/>
       <ImgwallImage src={SpoonFed} />
       <ImgwallImage src={DripX} />
     </div>
