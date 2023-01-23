@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 const MouseTrailer = () => {
   const canvas = useRef();
   const {viewWidth,viewHeight} = useSelector(store => store.documentInfo)
+
   
   // const [windowWidth, setWindowWidth] = useState(0);
   const target = {
@@ -173,7 +174,7 @@ const MouseTrailer = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [viewHeight,viewWidth]);
 
-  return <canvas id="canvas" ref={canvas} className="fixed left-0 top-0 -z-10 " />;
+  return <canvas id="canvas" ref={canvas} className="absolute left-0 top-0 -z-10 " />;
 };
 
 export default MouseTrailer;

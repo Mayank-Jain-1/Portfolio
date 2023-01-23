@@ -13,7 +13,6 @@ import Codefont from './Codefont'
 const Imgwall = () => {
   return (
     <section>
-    <Codefont text={'section'} className='tab-1'/>
 
 
     <div className='flex flex-wrap my-3'>
@@ -26,7 +25,6 @@ const Imgwall = () => {
       <ImgwallImage src={DripX} />
     </div>
 
-    <Codefont text={'/section'} className='tab-1'/>
     </section>
   )
 }
