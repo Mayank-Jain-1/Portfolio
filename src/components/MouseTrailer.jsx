@@ -29,7 +29,7 @@ const MouseTrailer = () => {
     if (event.touches) {
     } else {
       target.x = event.clientX;
-      target.y = event.clientY;
+      target.y = event.pageY ;
     }
     event.preventDefault();
   }
@@ -144,7 +144,7 @@ const MouseTrailer = () => {
     ctx.strokeStyle = "hsla(171,98%,56%,0.25)";
     ctx.lineWidth = 1;
 
-    if (color < 0.5) {
+    if (color < 0.3) {
       ctx.strokeStyle = "hsl(284, 91%, 15%)";
     } else {
       ctx.strokeStyle = "hsla(171,98%,56%,0.25)";
@@ -155,7 +155,6 @@ const MouseTrailer = () => {
       tendril.update(ctx);
       tendril.draw(ctx);
     }
-    requestAnimationFrame(() => loop(ctx));
   };
 
   useEffect(() => {
@@ -163,11 +162,18 @@ const MouseTrailer = () => {
     reset();
     resize(ctx);
 
-    loop(ctx);
-    
     window.addEventListener("mousemove", mouseMove);
+    var intervalId = null
+
+    if(viewWidth >= 768){
+      clearInterval(intervalId);
+      intervalId  = setInterval(() => {
+        loop(ctx)
+      }, 1000/150);
+    }
     
     return () => {
+      clearInterval(intervalId)
       window.removeEventListener("mousemove", mouseMove);
     };
 

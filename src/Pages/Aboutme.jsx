@@ -4,6 +4,7 @@ import Codefont from "../components/Codefont";
 import TagcloudDiv from "../components/TagcloudDiv";
 import { arrayToCrash } from "../functions/crashTextFuncs";
 import ScrollIndicators from "../components/ScrollIndicators";
+import BigbgText from "../components/BigbgText";
 
 const AboutMe = () => {
   const mainText = ["Me, Myself and I"];
@@ -52,7 +53,7 @@ const AboutMe = () => {
         <TagcloudDiv className='w-10/12 lg:w-6/12 ' textStyle='font-semibold text-brandGreen text-base sm:text-2xl md:text-3xl'/>
 
       </div>
-
+      <BigbgText text='About' className='absolute -z-20 bottom-0 translate-y-1/3 left-0 md:left-auto md:right-1/4'/>
       <ScrollIndicators/>
     </section>
   );
