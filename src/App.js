@@ -7,6 +7,7 @@ import Landing from "./Pages/Landing.jsx";
 import { updateSize, updateScroll } from "./actions";
 import { useDispatch } from "react-redux";
 import MyPortfolio from "./Pages/MyPortfolio";
+import ContactMe from "./Pages/ContactMe";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ const App = () => {
           <Landing />
           <MyPortfolio />
           <AboutMe />
+          <ContactMe />
     </div>
     </>
   );
