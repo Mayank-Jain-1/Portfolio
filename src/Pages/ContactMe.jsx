@@ -3,6 +3,7 @@ import BaseText from "../components/BaseText";
 import Codefont from "../components/Codefont";
 import mapSm from "../media/mapSM.png";
 import { arrayToCrash } from "../functions/crashTextFuncs";
+import ContactForm from "../components/ContactForm";
 
 const ContactMe = () => {
   const mainText = ["Contact me"];
@@ -11,6 +12,7 @@ const ContactMe = () => {
   const crashText = arrayToCrash(mainText, crashTextStyle);
   return (
     <section className="w-full lg:h-screen mt-16 px-1 sm:px-3 md:px-6 lg:pl-8 lg:pr-0 relative flex flex-col  lg:flex-row lg:items-center justify-center">
+      {/* Contact me and form side div */}
       <div className="lg:w-1/2 lg:mr-5">
         <Codefont text="h2" className="tab-1" />
         <div className="tab-2">{crashText}</div>
@@ -22,23 +24,29 @@ const ContactMe = () => {
           hesitate to use the form.
         </BaseText>
         <Codefont text="/p" className="tab-1" />
+        
+        <Codefont text="form" className="tab-2" />
+        <ContactForm className='tab-3'/>
+        <Codefont text="/form" className="tab-2" />
       </div>
 
-      <div className="border-none lg:w-1/2 m-4 lg:ml-5 h-[300px] sm:h-[400px] md:h-[500px] lg:h-full
-      overflow-hidden flex justify-center items-center relative">
-
+      {/* Map Side div */}
+      <div
+        className="border-none lg:w-1/2 m-4 lg:ml-5 h-[300px] sm:h-[400px] md:h-[500px] lg:h-full
+      overflow-hidden flex justify-center items-center relative"
+      >
         <div className="absolute bg-black bg-opacity-90 p-5 m-5 lg:m-12 top-0 left-0 text-white font-franklin text-xs md:text-base ">
-            <p>
-                Mayank Jain, <br />
-                Somewhere in <br />
-                Ludhiana, Punjab, India
-                <br />
-                <br />
-                <span className="text-brandGreen">@</span>
-                :
-                <br />
-                mayankjainx404@gmail.com
-            </p>
+          <p>
+            Mayank Jain, <br />
+            Somewhere in <br />
+            Ludhiana, Punjab, India
+            <br />
+            <br />
+            <span className="text-brandGreen">@</span>
+            :
+            <br />
+            mayankjainx404@gmail.com
+          </p>
         </div>
 
         <iframe
@@ -48,7 +56,13 @@ const ContactMe = () => {
           className="hidden lg:block  max-h-[1200px] max-w-[1000px]"
         ></iframe>
 
-        <img src={mapSm} width='1000px' height='100%' alt="" className="max-w-none object-cover lg:hidden" />
+        <img
+          src={mapSm}
+          width="1000px"
+          height="100%"
+          alt=""
+          className="max-w-none object-cover lg:hidden"
+        />
       </div>
     </section>
   );

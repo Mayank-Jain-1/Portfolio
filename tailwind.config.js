@@ -15,6 +15,7 @@ module.exports = {
         dark: "#1d1d1d",
         darker: "#181818",
         lighter: "#2b2b2b",
+        lightest: "#8d8d8d"
       },
       fontFamily: {
         mark: ["Marck Script", "cursive"],
