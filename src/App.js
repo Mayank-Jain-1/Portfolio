@@ -40,7 +40,7 @@ const App = () => {
     <MouseTrailer /> 
     <Sidebar />
     <Topbar />
-    <div className="lg:pl-36">
+    <div className="lg:pl-36 overflow-x-hidden">
           <Landing />
           <MyPortfolio />
           <AboutMe />
