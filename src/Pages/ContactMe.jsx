@@ -11,9 +11,9 @@ const ContactMe = () => {
     "text-4xl sm:text-5xl md:text-6xl lg:text-7xl  text-brandGreen";
   const crashText = arrayToCrash(mainText, crashTextStyle);
   return (
-    <section className="w-full lg:h-screen mt-16 px-1 sm:px-3 md:px-6 lg:pl-8 lg:pr-0 relative flex flex-col  lg:flex-row lg:items-center justify-center">
+    <section className="w-full lg:h-screen mt-16 mb-2 lg:mb-0  px-1 sm:px-3 md:px-6 lg:pl-8 lg:pr-0 relative flex flex-col  lg:flex-row lg:items-center justify-center">
       {/* Contact me and form side div */}
-      <div className="lg:w-1/2 ">
+      <div className="lg:w-1/2 flex flex-col h-full justify-center">
         <Codefont text="h2" className="tab-1" />
         <div className="tab-2">{crashText}</div>
         <Codefont text="/h2" className="tab-1" />
@@ -27,7 +27,12 @@ const ContactMe = () => {
         
         <Codefont text="form" className="tab-2" />
         <ContactForm className='tab-3'/>
-        <Codefont text="/form" className="tab-2" />
+        <Codefont text="/form" className="tab-2 mb-4" />
+        <div className="hidden lg:block absolute bottom-2">
+        <Codefont text="/body" className="tab-1" />
+        <Codefont text="/html" className="tab-0" />
+        </div>
+
       </div>
 
       {/* Map Side div */}
@@ -63,6 +68,13 @@ const ContactMe = () => {
           alt=""
           className="max-w-none object-cover lg:hidden"
         />
+      </div>
+
+      {/* Bottom CLosing tags */}
+
+      <div className="lg:hidden">
+        <Codefont text='/body' className='tab-1'/>
+        <Codefont text='/html' className='tab-0'/>
       </div>
     </section>
   );

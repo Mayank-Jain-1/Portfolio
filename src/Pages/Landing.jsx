@@ -34,7 +34,7 @@ const Landing = () => {
 
       <div >
         <Codefont text="h1" className="tab-1" />
-        <div className="tab-3">
+        <div className="ml-6 sm:ml-11 md:ml-8 lg:ml-12">
           {crashText}
           <Codefont text="/h1" className={"inline-block ml-5"} />
         </div>
