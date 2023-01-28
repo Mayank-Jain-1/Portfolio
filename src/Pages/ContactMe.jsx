@@ -1,8 +1,8 @@
 import React from "react";
 import BaseText from "../components/BaseText";
 import Codefont from "../components/Codefont";
-import BigbgText from '../components/BigbgText'
-import mapSm from "../media/mapSM.png";
+import BigbgText from '../components/BigbgText';
+import Map from '../components/Map'
 import { arrayToCrash } from "../functions/crashTextFuncs";
 import ContactForm from "../components/ContactForm";
 
@@ -37,39 +37,7 @@ const ContactMe = () => {
       </div>
 
       {/* Map Side div */}
-      <div
-        className="border-none lg:w-1/2 m-4 lg:ml-5 lg:mr-0 h-[300px] sm:h-[400px] md:h-[500px] lg:h-full
-      overflow-hidden flex justify-center items-center relative"
-      >
-        <div className="absolute bg-black bg-opacity-90 p-5 m-5 lg:m-12 top-0 left-0 text-white font-franklin text-xs md:text-base ">
-          <p>
-            Mayank Jain, <br />
-            Somewhere in <br />
-            Ludhiana, Punjab, India
-            <br />
-            <br />
-            <span className="text-brandGreen">@</span>
-            :
-            <br />
-            mayankjainx404@gmail.com
-          </p>
-        </div>
-
-        <iframe
-          src="https://snazzymaps.com/embed/457201"
-          width="100%"
-          height="100%"
-          className="hidden lg:block  max-h-[1200px] max-w-[1000px]"
-        ></iframe>
-
-        <img
-          src={mapSm}
-          width="1000px"
-          height="100%"
-          alt=""
-          className="max-w-none object-cover lg:hidden"
-        />
-      </div>
+      <Map />
 
       <BigbgText text='@' className='absolute 
       font-franklin  left-0 top-56
