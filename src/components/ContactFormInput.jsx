@@ -4,7 +4,7 @@ import { useState } from "react";
 const ContactFormField = ({type,name,value, placeHolder,flag,handleChange,width, className }) => {
   return (
     <div
-      className={`${className} ${width === 'half' ? 'w-[100%] sm:w-[49%]' : 'w-full' } h-[50px]  mb-[2%] relative
+      className={`${className} ${width === 'half' ? 'w-[100%] sm:w-[49%]' : 'w-full' } h-[50px]  mb-2.5 relative
     `}
     >
       <input
