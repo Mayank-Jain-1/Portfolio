@@ -13,7 +13,7 @@ const ContactMe = () => {
   return (
     <section className="w-full lg:h-screen mt-16 px-1 sm:px-3 md:px-6 lg:pl-8 lg:pr-0 relative flex flex-col  lg:flex-row lg:items-center justify-center">
       {/* Contact me and form side div */}
-      <div className="lg:w-1/2 lg:mr-5">
+      <div className="lg:w-1/2 ">
         <Codefont text="h2" className="tab-1" />
         <div className="tab-2">{crashText}</div>
         <Codefont text="/h2" className="tab-1" />
@@ -32,7 +32,7 @@ const ContactMe = () => {
 
       {/* Map Side div */}
       <div
-        className="border-none lg:w-1/2 m-4 lg:ml-5 h-[300px] sm:h-[400px] md:h-[500px] lg:h-full
+        className="border-none lg:w-1/2 m-4 lg:ml-5 lg:mr-0 h-[300px] sm:h-[400px] md:h-[500px] lg:h-full
       overflow-hidden flex justify-center items-center relative"
       >
         <div className="absolute bg-black bg-opacity-90 p-5 m-5 lg:m-12 top-0 left-0 text-white font-franklin text-xs md:text-base ">

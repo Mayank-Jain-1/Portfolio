@@ -53,7 +53,7 @@ const AboutMe = () => {
         <TagcloudDiv className='w-10/12 lg:w-6/12 ' textStyle='font-semibold text-brandGreen text-base sm:text-2xl md:text-3xl'/>
 
       </div>
-      <BigbgText text='About' className='absolute -z-20 bottom-0 leading-none left-0 md:left-auto md:right-[12%]'/>
+      <BigbgText text='About' className='absolute bottom-0 leading-none left-0 md:left-auto md:right-[12%]'/>
       <ScrollIndicators/>
     </section>
   );

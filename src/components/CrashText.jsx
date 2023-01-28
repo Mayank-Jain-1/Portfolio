@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { isVisible } from "../functions/docFunctions";
 
+// TODO CHeck the lag bug between the isvisible funcition
+
+
 const CrashText = ({ text, className, delay }) => {
   const ref = useRef();
   const { viewHeight, scrollY } = useSelector((store) => store.documentInfo);
@@ -21,7 +24,7 @@ const CrashText = ({ text, className, delay }) => {
   
   useEffect(() => {
     if (!startAnimationDone) {
-      const visible = isVisible(ref.current, viewHeight, 30);
+      const visible = isVisible(ref.current, viewHeight, 0);
 
       if (visible) {
         setStartAnimationDone(true);

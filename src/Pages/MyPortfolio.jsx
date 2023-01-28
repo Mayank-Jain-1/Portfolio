@@ -52,7 +52,7 @@ const MyPortfolio = () => {
       <div>
       <Codefont text={"section"} className="tab-1" />
       <div className="relative">
-        <BigbgText text="Work" className='absolute -z-10 sm:top-20 md:top-28 lg:top-44 left-1/3 -translate-y-full '/>
+        <BigbgText text="Work" className='absolute  sm:top-20 md:top-28 lg:top-44 left-1/3 -translate-y-full '/>
         <Imgwall />
       </div>
       <Codefont text={"/section"} className="tab-1" />
