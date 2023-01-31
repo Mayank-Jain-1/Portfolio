@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-const Notification = ({ text, bgColor, textColor }) => {
+const Notification = ({ textArray, className }) => {
   const timeToDisplay = 5000
   const leaveTime = 100
   const [leave, setLeave] = useState(false);
@@ -18,14 +18,22 @@ const Notification = ({ text, bgColor, textColor }) => {
     }, timeToDisplay + leaveTime);
   }, []);
 
+  const notifText = []
+  for (let i = 0; i < textArray.length; i++) {
+    const line = textArray[i];
+    notifText.push(<p key={i}>{line}</p>);
+    if( textArray.length - i > 2 ) notifText.push(<br/>)
+    
+  }
+
   if (present) {
     return (
       <div
-        className={`${bgColor} ${textColor} w-full my-1.5 flex-shrink-0 animate-appear p-3 ${
+        className={`${className} w-full my-1.5 flex-shrink-0 animate-appear p-3 ${
           leave && "translate-x-[120%] duration-100"
         }`}
       >
-        {text}
+        {notifText}
       </div>
     );
   }

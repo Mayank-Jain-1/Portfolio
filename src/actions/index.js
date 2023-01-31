@@ -35,13 +35,12 @@ export const updateScroll = () => {
   }
 }
 
-export const addNotif = (text, bgColor, textColor) => {
+export const addNotif = (textArray,className) => {
   return {
     type: "ADD_NOTIFICATION",
     props: {
-      text: text,
-      bgColor: bgColor,
-      textColor: textColor
+      textArray: textArray,
+      className: className
     }
   }
 }
