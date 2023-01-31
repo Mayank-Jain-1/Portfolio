@@ -8,7 +8,6 @@ import FillBtn from "./FillBtn";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = ({ className }) => {
-
   const formRef = useRef();
   const [messageInfo, setMessageInfo] = useState({
     name: "",
@@ -42,18 +41,28 @@ const ContactForm = ({ className }) => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      formRef.current,
-      process.env.REACT_APP_EMAILJS_PUBLIC_ID
-    ).then((res) => {
+    if (emailFlag && messageFlag && messageInfo.name && messageInfo.name) {
       formReset();
-    })
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          formRef.current,
+          process.env.REACT_APP_EMAILJS_PUBLIC_ID
+        )
+        .then(() => {
+          console.log('hor ji kidaan fer');
+        },() => {
+          console.log('kal aayeo');
+        });
+    }
+    else {
+      console.log('i am under da water');
+    }
   };
 
   const formReset = () => {
-    setFormInit(false)
+    setFormInit(false);
     setMessageInfo({
       name: "",
       email: "",
