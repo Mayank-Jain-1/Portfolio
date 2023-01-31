@@ -1,11 +1,15 @@
 import React from "react";
 import { useEffect } from "react";
+import { useRef } from "react";
 import { useState } from "react";
 import ContactFormField from "./ContactFormInput";
 import ContactFormTextArea from "./ContactFormTextArea";
-import FillBtn from './FillBtn'
+import FillBtn from "./FillBtn";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = ({ className }) => {
+
+  const formRef = useRef();
   const [messageInfo, setMessageInfo] = useState({
     name: "",
     email: "",
@@ -14,13 +18,11 @@ const ContactForm = ({ className }) => {
   });
   const [emailFlag, setEmailFlag] = useState(true);
   const [messageFlag, setMessageFlag] = useState(true);
-  const [formInit, setFormInit] = useState(false)
+  const [formInit, setFormInit] = useState(false);
   const validateEmail = (email) => {
-    const ans = email.match(
+    return email.match(
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
-
-    return ans;
   };
   const formValidation = () => {
     validateEmail(messageInfo.email) !== null
@@ -29,7 +31,7 @@ const ContactForm = ({ className }) => {
     messageInfo.message.length > 10
       ? setMessageFlag(true)
       : setMessageFlag(false);
-  }
+  };
 
   const handleChange = (event) => {
     setMessageInfo({
@@ -38,16 +40,40 @@ const ContactForm = ({ className }) => {
     });
   };
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      process.env.REACT_APP_EMAILJS_PUBLIC_ID
+    ).then((res) => {
+      formReset();
+    })
+  };
+
+  const formReset = () => {
+    setFormInit(false)
+    setMessageInfo({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+    setEmailFlag(true);
+    setMessageFlag(true);
+  };
+
   useEffect(() => {
     formInit && formValidation();
     setFormInit(true);
+    //needed for sync between message change and form validation
+  }, [messageInfo]);
 
-  }, [messageInfo])
-  
   //////////JSX BELOW ////////////
 
   return (
-    <form className={`${className} flex flex-wrap`}>
+    <form ref={formRef} className={`${className} flex flex-wrap`}>
       <ContactFormField
         name="name"
         value={messageInfo.name}
@@ -84,10 +110,12 @@ const ContactForm = ({ className }) => {
         handleChange={handleChange}
       />
       <div className="w-full">
-
-      <FillBtn text='Send Message' className='float-right'/>
+        <FillBtn
+          onClick={sendEmail}
+          text="Send Message"
+          className="float-right"
+        />
       </div>
-      
     </form>
   );
 };

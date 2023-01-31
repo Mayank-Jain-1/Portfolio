@@ -44,6 +44,7 @@ const Map = () => {
           width="100%"
           height="100%"
           className="hidden lg:block  max-h-[1200px] max-w-[1000px]"
+          
         ></iframe>
 
         <img
