@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { isVisible } from "../functions/docFunctions";
 
-// TODO CHeck the lag bug between the isvisible funcition
+// TODO CHeck the lag bug between the isvisible function
 
 
 const CrashText = ({ text, className, delay }) => {

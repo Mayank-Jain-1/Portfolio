@@ -34,3 +34,14 @@ export const updateScroll = () => {
     type: "UPDATE_SCROLL"
   }
 }
+
+export const addNotif = (text, bgColor, textColor) => {
+  return {
+    type: "ADD_NOTIF",
+    props: {
+      text: text,
+      bgColor: bgColor,
+      textColor: textColor
+    }
+  }
+}
