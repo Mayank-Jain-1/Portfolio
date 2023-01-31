@@ -1,14 +1,14 @@
 const initialState = {
   totalNotif: 0,
-  notifications: []
+  notificationsList: []
 }
 
 const notifications = (state=initialState, action) => {
   switch(action.type){
     case "ADD_NOTIFICATION":
       return {
-        notifications: [action.props, ...state.notifications],
-        totalNotif: totalNotif + 1,
+        notificationsList: [action.props, ...state.notificationsList],
+        totalNotif: state.totalNotif + 1,
       }
     default:
       return state

@@ -8,6 +8,7 @@ import { updateSize, updateScroll } from "./actions";
 import { useDispatch } from "react-redux";
 import MyPortfolio from "./Pages/MyPortfolio";
 import ContactMe from "./Pages/ContactMe";
+import Notifications from "./components/Notifications";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -40,6 +41,7 @@ const App = () => {
     <MouseTrailer /> 
     <Sidebar />
     <Topbar />
+    <Notifications />
     <div className="lg:pl-36 overflow-x-hidden">
           <Landing />
           <MyPortfolio />

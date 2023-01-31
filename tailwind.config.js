@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        "sm": "475px",
-        "md": "650px",
+        sm: "475px",
+        md: "650px",
       },
 
       colors: {
@@ -15,7 +15,7 @@ module.exports = {
         dark: "#1d1d1d",
         darker: "#181818",
         lighter: "#2b2b2b",
-        lightest: "#8d8d8d"
+        lightest: "#8d8d8d",
       },
       fontFamily: {
         mark: ["Marck Script", "cursive"],
@@ -26,6 +26,7 @@ module.exports = {
         wiggle: "wiggle 1.1s ease-in infinite",
         fadeIn: "fadeIn 0.8s ease-in-out 1",
         rotateIn: "rotateIn 0.8s ease-in-out 1",
+        appear: "appear 0.6s ease-in-out 1",
       },
       keyframes: {
         crash: {
@@ -77,6 +78,25 @@ module.exports = {
           "70%": {
             transform: "rotate(0deg)",
           },
+        },
+        appear: {
+          "0%": {
+            transform: "translateX(120%) ",
+            fontSize: "0px",
+            padding: "0",
+            margin: "0",
+          },
+          "30%": {
+            margin: "15px 0",
+            fontSize:"16px"
+          },
+          "70%": {
+            transform: "translateX(-30%)",
+          },
+          "100%":{
+            transform: "translateX(0)",
+            margin: "6px 0",
+          }
         },
       },
     },

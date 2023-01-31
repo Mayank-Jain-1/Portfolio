@@ -37,7 +37,7 @@ export const updateScroll = () => {
 
 export const addNotif = (text, bgColor, textColor) => {
   return {
-    type: "ADD_NOTIF",
+    type: "ADD_NOTIFICATION",
     props: {
       text: text,
       bgColor: bgColor,
