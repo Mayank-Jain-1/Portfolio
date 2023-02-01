@@ -1,8 +1,6 @@
 import React from 'react'
 
 const BigbgText = ({text,className}) => {
-  
-  const style = `${className} `
 
   return (
 

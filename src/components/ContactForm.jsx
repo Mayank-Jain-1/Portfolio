@@ -30,8 +30,10 @@ const ContactForm = ({ className }) => {
   };
   const validateEmail = (email) => {
     return email.match(
+      //eslint-disable-next-line
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
+      );
+      
   };
   const formValidation = () => {
     validateEmail(messageInfo.email) !== null
@@ -99,9 +101,10 @@ const ContactForm = ({ className }) => {
     formInit && formValidation();
     setFormInit(true);
     //needed for sync between message change and form validation
-  }, [messageInfo]);
 
-  //////////JSX BELOW ////////////
+
+    //eslint-disable-next-line
+  }, [messageInfo]);
 
   return (
     <form ref={formRef} className={`${className} flex flex-wrap`}>

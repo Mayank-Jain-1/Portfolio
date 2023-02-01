@@ -20,6 +20,7 @@ const Map = () => {
         dispatch(addNotif(["Have any questions?", "Drop me a line..."],"text-white bg-black w-64 mr-8"))
       }
     }
+    //eslint-disable-next-line
   }, [scrollY])  
   
   return (
@@ -42,6 +43,7 @@ const Map = () => {
         </div>
 
         <iframe
+          title='contactMap'
           src="https://snazzymaps.com/embed/457201"
           width="100%"
           height="100%"

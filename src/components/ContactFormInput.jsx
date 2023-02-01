@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 
 const ContactFormField = ({type,name,value, placeHolder,flag,handleChange,width, className }) => {
   return (
@@ -16,7 +15,7 @@ const ContactFormField = ({type,name,value, placeHolder,flag,handleChange,width,
       }
         placeholder={placeHolder}
       />
-      <span className={`${flag == false ? 'bg-red-700 w-full' : 'w-0 bg-brandGreen' } absolute left-0 bottom-0 h-0.5 z-10 peer-focus:w-full duration-300 
+      <span className={`${flag === false ? 'bg-red-700 w-full' : 'w-0 bg-brandGreen' } absolute left-0 bottom-0 h-0.5 z-10 peer-focus:w-full duration-300 
       peer-invalid:bg-red-700 peer-invalid:w-full
       `} />
     </div>

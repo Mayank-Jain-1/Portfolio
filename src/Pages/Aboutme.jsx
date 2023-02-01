@@ -34,6 +34,7 @@ const AboutMe = () => {
                 className="text-brandGreen hover:text-emerald-400"
                 href="https://vitbhopal.ac.in/"
                 target="_blank"
+                rel="noreferrer"
               >
                 VIT Bhopal
               </a>

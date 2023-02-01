@@ -21,6 +21,7 @@ const Notifications = () => {
         />,
       ]);
     }
+    //eslint-disable-next-line
   }, [totalNotif]);
 
   return (

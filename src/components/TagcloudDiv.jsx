@@ -11,7 +11,7 @@ const TagcloudDiv = ({className,textStyle}) => {
 
   useEffect(() => {
     setWidth(divRef.current.clientWidth)
-  }, [viewWidth])
+  }, [viewWidth,divRef])
   
 
   return(
