@@ -45,7 +45,7 @@ const Map = () => {
           src="https://snazzymaps.com/embed/457201"
           width="100%"
           height="100%"
-          className="hidden lg:block  max-h-[1200px] max-w-[1000px]"
+          className="hidden lg:block max-h-[1200px] max-w-[1000px]"
           
         ></iframe>
 

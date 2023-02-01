@@ -13,7 +13,7 @@ const MyPortfolio = () => {
   const crashText = arrayToCrash(mainText, crashTextStyle);
 
   return (
-    <section>
+    <section id="portfolio">
       <div className="w-full pt-24 pb-8 px-1 sm:px-3 md:px-6 lg:px-8 relative">
         <Codefont text="h2" className="tab-1" />
         <div className="tab-2">{crashText}</div>

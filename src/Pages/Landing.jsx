@@ -24,6 +24,7 @@ const Landing = () => {
 
   return (
     <section
+      id="landing"
       className="py-16 px-1 sm:px-3 md:px-6 lg:px-8 relative
      flex flex-col h-screen text-white justify-center"
     >
