@@ -6,6 +6,8 @@ import ContactFormField from "./ContactFormInput";
 import ContactFormTextArea from "./ContactFormTextArea";
 import FillBtn from "./FillBtn";
 import emailjs from "@emailjs/browser";
+import { useDispatch } from "react-redux";
+import { addNotif } from "../actions";
 
 const ContactForm = ({ className }) => {
   const formRef = useRef();
@@ -18,6 +20,15 @@ const ContactForm = ({ className }) => {
   const [emailFlag, setEmailFlag] = useState(true);
   const [messageFlag, setMessageFlag] = useState(true);
   const [formInit, setFormInit] = useState(false);
+  const dispatch = useDispatch()
+
+  
+  const handleChange = (event) => {
+    setMessageInfo({
+      ...messageInfo,
+      [event.target.name]: event.target.value,
+    });
+  };
   const validateEmail = (email) => {
     return email.match(
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -31,18 +42,11 @@ const ContactForm = ({ className }) => {
       ? setMessageFlag(true)
       : setMessageFlag(false);
   };
-
-  const handleChange = (event) => {
-    setMessageInfo({
-      ...messageInfo,
-      [event.target.name]: event.target.value,
-    });
-  };
-
   const sendEmail = (e) => {
     e.preventDefault();
     if (emailFlag && messageFlag && messageInfo.name && messageInfo.name) {
-      formReset();
+      // formReset();
+      dispatch(addNotif(["Please wait. Processing"], "bg-black text-white w-64"))
       emailjs
         .sendForm(
           process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -51,16 +55,15 @@ const ContactForm = ({ className }) => {
           process.env.REACT_APP_EMAILJS_PUBLIC_ID
         )
         .then(() => {
-          console.log('hor ji kidaan fer');
+          dispatch(addNotif(["Your e-mail has been", "successfully sent. Thank you!"], "bg-green-500 text-white w-64"))
         },() => {
           console.log('kal aayeo');
         });
     }
     else {
-      console.log('i am under da water');
+      dispatch(addNotif(["Please Fill all the details correctly"],"text-white bg-red-700 w-72"))
     }
   };
-
   const formReset = () => {
     setFormInit(false);
     setMessageInfo({
