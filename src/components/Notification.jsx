@@ -29,7 +29,7 @@ const Notification = ({ textArray, className }) => {
   if (present) {
     return (
       <div
-        className={`${className}  my-1.5 flex-shrink-0 animate-appear p-4 ${
+        className={`${className}  my-1.5 flex-shrink-0 animate-appear p-4 opacity-95 ${
           leave && "translate-x-[120%] duration-150"
         }`}
       >

@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { addNotif } from '../actions';
 import { isVisible } from '../functions/docFunctions';
 import mapSm from "../media/mapSM.png";
 
@@ -11,11 +12,12 @@ const Map = () => {
   const {viewHeight,scrollY} = useSelector(store => store.documentInfo)
 
   const ref = useRef()
-
+  const dispatch = useDispatch()
   useEffect(() => {
     if(!animate){
       if(isVisible(ref.current,viewHeight,150)){
         setAnimate(true)
+        dispatch(addNotif(["Have any questions?", "Drop me a line..."],"text-white bg-black w-64 mr-8"))
       }
     }
   }, [scrollY])  

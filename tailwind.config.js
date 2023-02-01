@@ -84,10 +84,11 @@ module.exports = {
             transform: "translateX(120%) ",
             fontSize: "0px",
             padding: "0",
-            margin: "0",
+            marginTop: "0",
+            marginBottom: "0",
           },
           "30%": {
-            margin: "15px 0",
+            margin: "15px",
             fontSize:"16px"
           },
           "70%": {
@@ -95,7 +96,8 @@ module.exports = {
           },
           "100%":{
             transform: "translateX(0)",
-            margin: "6px 0",
+            marginTop: "6px",
+            marginBottom: "6px",
           }
         },
       },

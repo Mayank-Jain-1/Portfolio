@@ -20,9 +20,8 @@ const ContactForm = ({ className }) => {
   const [emailFlag, setEmailFlag] = useState(true);
   const [messageFlag, setMessageFlag] = useState(true);
   const [formInit, setFormInit] = useState(false);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  
   const handleChange = (event) => {
     setMessageInfo({
       ...messageInfo,
@@ -45,25 +44,45 @@ const ContactForm = ({ className }) => {
   const sendEmail = (e) => {
     e.preventDefault();
     if (emailFlag && messageFlag && messageInfo.name && messageInfo.name) {
-      // formReset();
-      dispatch(addNotif(["Please wait. Processing"], "bg-black text-white w-64"))
-      emailjs
-        .sendForm(
-          process.env.REACT_APP_EMAILJS_SERVICE_ID,
-          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-          formRef.current,
-          process.env.REACT_APP_EMAILJS_PUBLIC_ID
+      dispatch(
+        addNotif(["Please wait. Processing"], "bg-black text-white w-64 mr-8")
+      );
+      try {
+        emailjs
+          .sendForm(
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+            formRef.current,
+            process.env.REACT_APP_EMAILJS_PUBLIC_ID
+          )
+          .then(() => {
+            dispatch(
+              addNotif(
+                ["Your e-mail has been", "successfully sent. Thank you!"],
+                "bg-green-500 text-white w-64 mr-8"
+              )
+            );
+          });
+        formReset();
+      } catch {
+        dispatch(
+          addNotif(
+            ["Error while sendind e-mail", "Try again!"],
+            "text-white bg-red-700 w-64"
+          )
+        );
+      }
+    } else {
+      dispatch(
+        addNotif(
+          ["Please fill all the fields correctly"],
+          "text-white bg-red-700 w-72"
         )
-        .then(() => {
-          dispatch(addNotif(["Your e-mail has been", "successfully sent. Thank you!"], "bg-green-500 text-white w-64"))
-        },() => {
-          console.log('kal aayeo');
-        });
-    }
-    else {
-      dispatch(addNotif(["Please Fill all the details correctly"],"text-white bg-red-700 w-72"))
+      );
     }
   };
+
+
   const formReset = () => {
     setFormInit(false);
     setMessageInfo({
