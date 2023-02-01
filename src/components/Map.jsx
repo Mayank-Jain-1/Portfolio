@@ -15,7 +15,7 @@ const Map = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     if(!animate){
-      if(isVisible(ref.current,viewHeight,150)){
+      if(isVisible(ref.current,viewHeight,0)){
         setAnimate(true)
         dispatch(addNotif(["Have any questions?", "Drop me a line..."],"text-white bg-black w-64 mr-8"))
       }
