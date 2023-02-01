@@ -32,7 +32,8 @@ const AboutMe = () => {
             <span>
               <a
                 className="text-brandGreen hover:text-emerald-400"
-                href="toChange"
+                href="https://vitbhopal.ac.in/"
+                target="_blank"
               >
                 VIT Bhopal
               </a>
