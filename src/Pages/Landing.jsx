@@ -5,6 +5,7 @@ import J from "../media/J4.png";
 import M from "../media/M.png";
 import { arrayToCrash } from "../functions/crashTextFuncs";
 import ScrollIndicators from "../components/ScrollIndicators";
+import {  scroller } from "react-scroll";
 
 const Landing = () => {
   const mainText = [
@@ -21,6 +22,13 @@ const Landing = () => {
   const crashTextStyle =
     "text-4xl sm:text-5xl md:text-7xl lg:text-8xl hover:text-brandGreen";
   const crashText = arrayToCrash(mainText, crashTextStyle);
+  const scrollToContact = () => {
+    scroller.scrollTo('contactMe',{
+      duration: 500,
+      smooth:true,
+    })
+  }
+
 
   return (
     <section
@@ -45,7 +53,7 @@ const Landing = () => {
           Front End Developer / React Developer
         </p>
         <Codefont text="/p" className="tab-1" />
-        <FillBtn text={"Contact Me!"} className="tab-3" />
+        <FillBtn onClick={scrollToContact} text={"Contact Me!"} className="tab-3" />
       </div>
 
       <ScrollIndicators/>
