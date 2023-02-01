@@ -7,7 +7,6 @@ import NewsMonkey from '../media/NewsMonkey.png'
 import SpoonFed from '../media/SpoonFed.png'
 import DripX from '../media/DripX.png'
 import ImgwallImage from './ImgwallImage'
-import Codefont from './Codefont'
 
 
 const Imgwall = () => {
