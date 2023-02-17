@@ -9,6 +9,7 @@ This is a portfolio website built using React, Tailwind CSS, and Redux to showca
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
+- [What i Learnt](#what-i-learnt)
 - [Folder Structure](#folder-structure)
 - [License](#license)
 
@@ -77,6 +78,13 @@ npm run start
 
 6. Open the application in your browser by navigating to `http://localhost:3000`.
 
+## What i learnt
+- How to implement smooth scrolling functionality for navigation using links.
+- How to customize a map to match the theme of the website.
+- How to Create toasty notifications. Linking it to redux and can be called from anywhere now using a simple dispatch.
+- How to use Redux to manage the state of the application, including creating actions, reducers, and a store.
+- How to use the EmailJS API to send emails directly from the contact form without the need for a backend.
+- How to use HTML Canvas to create custom animations like the home page mouse trailer.
 
 ## Folder Structure
 
