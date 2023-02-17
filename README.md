@@ -1,5 +1,6 @@
 # Mayank Jain Portfolio
 
+#### [Link - Mayank Jain Portfolio](https://mayank-jain.vercel.app/)
 This is a portfolio website built using React, Tailwind CSS, and Redux to showcase the projects and skills of Mayank Jain.
 
 ## Table of Contents
@@ -13,11 +14,10 @@ This is a portfolio website built using React, Tailwind CSS, and Redux to showca
 
 ## Demo
 
-[Live App](https://mayank-jain.vercel.app/)
+### [Live App](https://mayank-jain.vercel.app/)
 
-<video src="https://i.imgur.com/4wEJlz4.mp4" width="640" height="360" controls>
-Your browser does not support the video tag.
-</video>
+#### [Video Demo](https://i.imgur.com/4wEJlz4.mp4)
+[<img src="https://imgur.com/NTL9nZh.png" width="500" height="250"/>](https://i.imgur.com/4wEJlz4.mp4)
 
 
 ## Features
@@ -90,3 +90,6 @@ npm run start
     ├───Pages
     └───reducers
 ```
+
+## License 
+This project is licensed under the MIT License.
