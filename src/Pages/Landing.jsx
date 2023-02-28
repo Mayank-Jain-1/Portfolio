@@ -1,13 +1,14 @@
 import React from "react";
 import Codefont from "../components/Codefont";
 import FillBtn from "../components/FillBtn";
-import J from "../media/J4.png";
-import M from "../media/M.png";
 import { arrayToCrash } from "../functions/crashTextFuncs";
 import ScrollIndicators from "../components/ScrollIndicators";
 import {  scroller } from "react-scroll";
+const M = require("../media/M.png");
+const J =  require("../media/J.png");
 
 const Landing = () => {
+  
   const mainText = [
     "Hi, ",
     "<br/>",
