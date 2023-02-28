@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Mayank Jain Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### [Link - Mayank Jain Portfolio](https://mayank-jain.vercel.app/)
+This is a portfolio website built using React, Tailwind CSS, and Redux to showcase the projects and skills of Mayank Jain.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Demo](#demo)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [What i Learnt](#what-i-learnt)
+- [Folder Structure](#folder-structure)
+- [License](#license)
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### [Live App](https://mayank-jain.vercel.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### [Video Demo](https://i.imgur.com/4wEJlz4.mp4)
+[<img src="https://imgur.com/NTL9nZh.png" width="500" height="250"/>](https://i.imgur.com/4wEJlz4.mp4)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Responsive design that works on all screen sizes
+- Cool home page cursor animation
+- Smooth Scroll to section using links
+- Projects section to showcase work
+- Contact form for getting in touch
+- Skill section to display relevant skills
+- Custom map to match the theme
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- Redux
+- Tailwind CSS
+- TagCloud
+- Smooth Scroll
+- Snazzy Maps
+- EmailJS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+To get started with this project, you can follow the steps below:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository to your local machine.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/Mayank-Jain-1/Portfolio.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Navigate into the project directory.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+cd Portfolio
+```
+3. Install the required dependencies
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Create a .env file in the root of the project and add the following variables:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```.env
+REACT_APP_EMAILJS_USER_ID = <YOUR_EMAILJS_USER_ID>
+REACT_APP_EMAILJS_SERVICE_ID = <YOUR_EMAILJS_SERVICE_ID>
+REACT_APP_EMAILJS_TEMPLATE_ID = <YOUR_EMAILJS_TEMPLATE_ID>
+```
 
-### Code Splitting
+5. Start Development Server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm run start
+```
 
-### Analyzing the Bundle Size
+6. Open the application in your browser by navigating to `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## What i learnt
+- How to implement smooth scrolling functionality for navigation using links.
+- How to customize a map to match the theme of the website.
+- How to Create toasty notifications. Linking it to redux and can be called from anywhere now using a simple dispatch.
+- How to use Redux to manage the state of the application, including creating actions, reducers, and a store.
+- How to use the EmailJS API to send emails directly from the contact form without the need for a backend.
+- How to use HTML Canvas to create custom animations like the home page mouse trailer.
 
-### Making a Progressive Web App
+## Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+├───public
+└───src
+    ├───actions
+    ├───components
+    ├───functions
+    ├───media
+    ├───Pages
+    └───reducers
+```
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License 
+This project is licensed under the MIT License.
