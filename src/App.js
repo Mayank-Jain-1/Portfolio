@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import MyPortfolio from "./Pages/MyPortfolio";
 import ContactMe from "./Pages/ContactMe";
 import Notifications from "./components/Notifications";
+import Loading from "./Pages/Loading";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -38,16 +39,17 @@ const App = () => {
 
   return (
     <>
-    <MouseTrailer /> 
-    <Sidebar />
-    <Topbar />
-    <Notifications />
-    <div className="lg:pl-36 overflow-x-hidden">
-          <Landing />
-          <MyPortfolio />
-          <AboutMe />
-          <ContactMe />
-    </div>
+      <MouseTrailer />
+      <Sidebar />
+      <Topbar />
+      <Notifications />
+      <div className="lg:pl-36 overflow-x-hidden">
+        <Loading />
+        <Landing />
+        <MyPortfolio />
+        <AboutMe />
+        <ContactMe />
+      </div>
     </>
   );
 };

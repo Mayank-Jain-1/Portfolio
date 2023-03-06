@@ -27,8 +27,23 @@ module.exports = {
         fadeIn: "fadeIn 0.8s ease-in-out 1",
         rotateIn: "rotateIn 0.8s ease-in-out 1",
         appear: "appear 0.6s ease-in-out 1",
+        loading: "loading 3s ease-in-out 1",
       },
       keyframes: {
+        loading: {
+          "0%": {
+            width: "100%",
+          },
+          "20%": {
+            width: "40%",
+          },
+          "50%": {
+            width: "20%",
+          },
+          "100%": {
+            width: "0%",
+          },
+        },
         crash: {
           "0%": {
             transform: "scale(1,1)",
@@ -89,16 +104,16 @@ module.exports = {
           },
           "30%": {
             margin: "15px",
-            fontSize:"16px"
+            fontSize: "16px",
           },
           "70%": {
             transform: "translateX(-30%)",
           },
-          "100%":{
+          "100%": {
             transform: "translateX(0)",
             marginTop: "6px",
             marginBottom: "6px",
-          }
+          },
         },
       },
     },
