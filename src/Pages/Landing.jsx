@@ -1,11 +1,11 @@
 import React from "react";
+import M from "../media/M.png";
+import J from "../media/J.png";
 import Codefont from "../components/Codefont";
 import FillBtn from "../components/FillBtn";
 import { arrayToCrash } from "../functions/crashTextFuncs";
 import ScrollIndicators from "../components/ScrollIndicators";
 import {  scroller } from "react-scroll";
-const M = require("../media/M.png");
-const J =  require("../media/J.png");
 
 const Landing = () => {
   
