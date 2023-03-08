@@ -9,7 +9,7 @@ const Loading = ({className}) => {
   const crashText = arrayToCrash(mainText, crashTextStyle);
 
   return (
-    <div className={`${className} h-screen w-screen flex justify-center items-center fixed z-30 bg-dark flex-col`}>
+    <div className={`${className} h-screen w-screen flex justify-center items-center fixed z-50 bg-dark flex-col left-0 top-0`}>
       <div className="">{crashText}</div>
       <p className="text-lightest">Let's take a trip around my Portfolio</p>
       <LoadingBar className="my-2"/>
