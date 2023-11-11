@@ -180,7 +180,7 @@ const MouseTrailer = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [viewHeight,viewWidth]);
 
-  return <canvas id="canvas" ref={canvas} className="absolute left-0 top-0 -z-10 " />;
+  return <canvas id="canvas" ref={canvas} className="absolute left-0 top-0 -z-10 w-full" />;
 };
 
 export default MouseTrailer;

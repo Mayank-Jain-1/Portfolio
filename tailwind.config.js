@@ -27,7 +27,7 @@ module.exports = {
         fadeIn: "fadeIn 0.8s ease-in-out 1",
         rotateIn: "rotateIn 0.8s ease-in-out 1",
         appear: "appear 0.6s ease-in-out 1",
-        loading: "loading 3.5s ease-in-out 1",
+        loading: "loading 4s ease-in-out 1", //Set Initial Loading page time from here
       },
       keyframes: {
         loading: {

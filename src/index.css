@@ -25,6 +25,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* Hidden SCroll Bar */
+}
+
+* *::-webkit-scrollbar{
+  /* Hidden ScrollBar */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  display: none;
 }
 
 body{
